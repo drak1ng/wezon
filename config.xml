@@ -91,7 +91,7 @@
 <feature name="Geolocation">
 	<param name="ios-package" value="CDVLocation" />
 </feature>
-<gap:plugin name="org.apache.cordova.geolocation" />
+<plugin name="cordova-plugin-geolocation" spec="1.0.1" source="pgb" />
 
  <feature name="Whatsapp">
  	<param name="android-package" value="mobi.moica.whatsapp.Whatsapp" />
