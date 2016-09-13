@@ -101,7 +101,7 @@
 <plugin name="com.aserputko.speech.speechrecognition2" spec="0.1.1" source="pgb" />
 
 <!--Network Information-->
-<gap:plugin name="org.apache.cordova.network-information" />
+<plugin name="cordova-plugin-network-information" spec="1.0.1" source="pgb" />
 
 <!--Upload de arquivos -->
 <plugin name="cordova-plugin-file-transfer" spec="1.3.0" source="pgb" />
