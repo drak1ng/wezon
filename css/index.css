@@ -114,6 +114,8 @@ h1 {
     -webkit-animation:fade 3000ms infinite;
 }
 
+
+
 .carregando {
 	padding:230px 0px 200px 0px;
 	background:url(../img/loading.gif) center center no-repeat;
@@ -136,20 +138,22 @@ h1 {
 	position:fixed;
 	top:0px;
 	left:0px;
-	z-index:9999;
+	z-index: 999;
 }
 
 .topo .logotipo {
-	background:#000;
+	background:#671464;
 	text-align:center;
-	padding:32px 0px 6px 0px;
+	padding:35px 10px 9px 10px;
+	text-shadow: none;
+	text-transform: none;
 }
 
 .topo .titulo_tela {
 	text-align:center;
 	font-weight:bold;
-	color:#000;
-	background:#ffbf00;
+	color:#FFF;
+	background:#444;
 	padding:10px 0px 6px 0px;
 	font-size:20px;
 	text-shadow:none !important;
@@ -157,25 +161,40 @@ h1 {
 
 .botoes-rodape {
 	width:100%;
-	height:46px;
+	height:66px;
 	position:fixed;
 	z-index:999;
 	bottom:0px;
 	left:0px;
-	background:#ffbf00;
-	padding:6px 0px
+	background:#003263;
+	padding:0px
 }
 
-.botoes-rodape .botao {
-	width:33%;
+.botoes-rodape-bloco1 {
+	width:25%;
 	float:left;
 	text-align:center;
 	font-size:13px;
-	color:#000;
+	color:#FFF;
 	text-transform:none;
-	padding-top:32px;
+	padding-top:46px;
+	padding-bottom:4px;
 	background:top center no-repeat;
-	background-size:30px;
+	background-size:38px;
+	text-shadow:none !important;
+}
+
+.botoes-rodape-bloco2 {
+	width:25%;
+	float:left;
+	text-align:center;
+	font-size:13px;
+	color:#003263;
+	text-transform:none;
+	padding-top:46px;
+	padding-bottom:4px;
+	background:top center no-repeat #ffe01b;
+	background-size:38px;
 	text-shadow:none !important;
 }
 
@@ -187,16 +206,106 @@ h1 {
 	padding:5px 0px 0px 10px;
 }
 
-.bt_buscar {
-	min-width:10px;
-	float:right;
-	font-size:12px;
-	font-weight:normal;
-	padding:5px 10px 0px 0px;
+#contato_mensagem {
+	height:130px !important;
 }
 
-.ui-content { margin-top:20px !important; }
+.lista-botoes {
+	background:10px 3px no-repeat;
+	background-size: 40px;
+	border-bottom:1px solid #CCC;
+	padding:20px 0px 20px 60px;
+}
 
+.lista_mensagens {
+	border-bottom: 1px solid #CCC;
+	background:#FFF;
+	padding:15px 10px;
+}
+
+.lista_mensagens_data {
+	font-size:12px;
+	color: #000;
+	font-weight: normal;
+}
+
+.lista_mensagens_titulo {
+	font-size:15px;
+	color: #003263;
+	text-transform: uppercase;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.lista_mensagens_texto {
+	font-size:14px;
+	color: #777;
+	font-weight: normal;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+}
+
+
+.lista_novidades {
+	border-bottom: 1px solid #CCC;
+	background:#FFF;
+	padding:15px 10px;
+}
+
+.lista_novidades_data {
+	font-size:12px;
+	color: #000;
+	font-weight: normal;
+}
+
+.lista_novidades_titulo {
+	font-size:15px;
+	color: #003263;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align:left;
+}
+
+
+
+.lista_mensagens_ficha {
+	border-bottom: 1px solid #CCC;
+	background:#FFF;
+	padding:15px 10px;
+}
+
+.lista_mensagens_ficha_data {
+	font-size:12px;
+	color: #000;
+	font-weight: normal;
+}
+
+.lista_mensagens_ficha_titulo {
+	font-size:15px;
+	color: #003263;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height:22px;
+}
+
+.lista_mensagens_ficha_texto {
+	font-size:14px;
+	color: #777;
+	font-weight: normal;
+	background:#f9f9f9;
+	border-top:1px solid #CCC;
+	margin:15px -10px -15px -10px;
+	padding: 15px;
+	line-height:22px;
+	
+}
+
+
+.ui-content { margin-top:20px !important; }
 
  a.sm2_link {}
  a.sm2_link:hover {}

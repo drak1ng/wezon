@@ -29,7 +29,7 @@
         <link rel="stylesheet" type="text/css" href="../css/index.css" />
         <link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.min.css" />
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-        <title>Tecfil</title>
+        <title>Wezon</title>
 		<script type="text/javascript" src="../js/jquery.min.js"></script>
 		<script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js"></script>
 		<script type="text/javascript" src="../js/cordova.js"></script>
@@ -38,8 +38,8 @@
 	    <div data-role="page" style="background:#F3F3F3;">
 		    <div class="topo">
 			    <div class="logotipo">
-				    <div style="min-width:10px; float:left;" id="bt_cadastro_voltar">Voltar</div>
-				    <div style="margin:0px 80px; text-align:center"><b>CADASTRE-SE<b></div>
+				    <div style="min-width:10px; float:left; color:#FFF; margin-left:5px;" id="bt_cadastro_voltar">Voltar</div>
+				    <div style="margin:0px 80px; text-align:center; color:#FFF;"><b>CADASTRE-SE<b></div>
 				</div>
 		    </div>
 
@@ -51,7 +51,7 @@
 					<input type="tel" id="cadastro_telefone" placeholder="Telefone">
 					<input type="email" id="cadastro_email" placeholder="E-mail">
 					<input type="password" id="cadastro_senha" placeholder="Senha">
-					<div style="border:2px solid #003263; border-radius:10px; background:#003263; color:#FFF; padding:10px; margin-top:20px; text-shadow: none; text-transform:none; text-align:center;" id="bt_cadastro_salvar">Quero me Cadastrar</div>
+					<div style="border:2px solid #671464; border-radius:10px; background:#671464; color:#FFF; padding:10px; margin-top:20px; text-shadow: none; text-transform:none; text-align:center;" id="bt_cadastro_salvar">Quero me Cadastrar</div>
 				</div>
 			</div>
 		
@@ -73,7 +73,7 @@
 					if(email==""){ alert("O campo E-mail deve ser preenchido"); return false; }
 					if(senha==""){ alert("O campo Senha deve ser preenchido"); return false; }
 					
-					$.get("http://homologacao.gruposofape.com.br/tecfil/catalogo/app_api/cadastro.php", { nome:nome, empresa:empresa, telefone:telefone, email:email, senha:senha }, function(data){
+					$.get("http://wezon.com.br/app_api/cadastro.php", { nome:nome, empresa:empresa, telefone:telefone, email:email, senha:senha }, function(data){
 						if(data=="ERRO_EMAIL"){
 							alert("Esse E-mail já foi utilizado em outro Cadastro");
 						}else if(data=="OK"){
@@ -86,7 +86,7 @@
 				});
 				
 				$("#bt_cadastro_voltar").click(function(){
-					$.mobile.changePage("inicio.html", { transition: "fade", changeHash: false });
+					$.mobile.changePage("login.html", { transition: "fade", changeHash: false });
 				});
 				
 			</script>
