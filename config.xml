@@ -104,7 +104,7 @@
 <gap:plugin name="org.apache.cordova.network-information" />
 
 <!--In App Browser-->
-<gap:plugin name="org.apache.cordova.InAppBrowser" />
+<plugin name="cordova-plugin-inappbrowser" spec="1.0.1" source="pgb" />
 
 <!--Camera-->
 <gap:plugin name="org.apache.cordova.camera" />
