@@ -79,7 +79,6 @@
 <feature name="StatusBar">
 	<param name="ios-package" value="CDVStatusBar" onload="true" />
 </feature>
-<plugin name="com.phonegap.plugin.statusbar" spec="1.1.0" source="pgb" />
 <gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0">
 	<preference name="StatusBarStyle" value="blackopaque" />
 	<preference name="StatusBarOverlaysWebView" value="true" />
@@ -105,7 +104,7 @@
 <gap:plugin name="org.apache.cordova.network-information" />
 
 <!--In App Browser-->
-<plugin name="cordova-plugin-inappbrowser" spec="1.0.1" source="pgb" />
+<plugin name="org.apache.cordova.inappbrowser" spec="0.6.0" source="pgb" />
 
 <!--Camera-->
 <gap:plugin name="org.apache.cordova.camera" />
