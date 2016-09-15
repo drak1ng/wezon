@@ -44,13 +44,16 @@
 		    </div>
 
 			<div role="main" class="ui-content">
-				<div id="id_conteudo_cadastro" style="text-align:center; padding:40px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify;">
+				<div id="id_conteudo_cadastro" style="text-align:center; padding:40px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
 					<p style='margin-bottom:30px;'>Preencha todos os campos abaixo para se cadastrar e ter acesso ao nosso catálogo de produtos.</p>
-					<input type="text" id="cadastro_nome" placeholder="Nome Completo">
-					<input type="text" id="cadastro_empresa" placeholder="Empresa">
-					<input type="tel" id="cadastro_telefone" placeholder="Telefone">
+					<input type="text" id="cadastro_nome" placeholder="Nome">
+					<input type="text" id="cadastro_sobrenome" placeholder="Sobrenome">
+					<input type="text" id="cadastro_apelido" placeholder="Apelido">
+					<input type="tel" id="cadastro_aniversario" placeholder="Data de Aniversário">
 					<input type="email" id="cadastro_email" placeholder="E-mail">
+					<input type="tel" id="cadastro_celular" placeholder="Celular">
 					<input type="password" id="cadastro_senha" placeholder="Senha">
+					<input type="password" id="cadastro_confirme_senha" placeholder="Confirme a Senha">
 					<div style="border:2px solid #671464; border-radius:10px; background:#671464; color:#FFF; padding:10px; margin-top:20px; text-shadow: none; text-transform:none; text-align:center;" id="bt_cadastro_salvar">Quero me Cadastrar</div>
 				</div>
 			</div>
@@ -58,24 +61,32 @@
 			
 			<script>
 				
-				$('#cadastro_telefone').mask('(99) 9999-9999?9');
+				$('#cadastro_aniversario').mask('99/99/9999');
+				$('#cadastro_celular').mask('(99) 9999-9999');
 				
 				$("#bt_cadastro_salvar").click(function(){
 					var nome = $('#cadastro_nome').val();
-					var empresa = $('#cadastro_empresa').val();
-					var telefone = $('#cadastro_telefone').val();
+					var sobrenome = $('#cadastro_sobrenome').val();
+					var apelido = $('#cadastro_apelido').val();
+					var aniversario = $('#cadastro_aniversario').val();
 					var email = $('#cadastro_email').val();
+					var celular = $('#cadastro_celular').val();
 					var senha = $('#cadastro_senha').val();
+					var confirme_senha = $('#cadastro_confirme_senha').val();
 					
 					if(nome==""){ alert("O campo Nome deve ser preenchido"); return false; }
-					if(empresa==""){ alert("O campo Empresa deve ser preenchido"); return false; }
-					if(telefone==""){ alert("O campo Telefone deve ser preenchido"); return false; }
+					if(sobrenome==""){ alert("O campo Sobrenome deve ser preenchido"); return false; }
+					if(apelido==""){ alert("O campo Apelido deve ser preenchido"); return false; }
+					if(aniversario==""){ alert("O campo Data de Aniversário deve ser preenchido"); return false; }
 					if(email==""){ alert("O campo E-mail deve ser preenchido"); return false; }
+					if(celular==""){ alert("O campo Celular deve ser preenchido"); return false; }
 					if(senha==""){ alert("O campo Senha deve ser preenchido"); return false; }
+					if(confirme_senha==""){ alert("O campo Confirme a Senha deve ser preenchido"); return false; }
+					if(confirme_senha!=senha){ alert("As senha informadas não são iguais"); return false; }
 					
-					$.get("http://wezon.com.br/app_api/cadastro.php", { nome:nome, empresa:empresa, telefone:telefone, email:email, senha:senha }, function(data){
-						if(data=="ERRO_EMAIL"){
-							alert("Esse E-mail já foi utilizado em outro Cadastro");
+					$.get("http://wezon.com.br/app_api/cadastro.php", { nome:nome, sobrenome:sobrenome, apelido:apelido, aniversario:aniversario, email:email, celular:celular, senha:senha }, function(data){
+						if(data=="ERRO_CELULAR"){
+							alert("Esse Celular já foi utilizado em outro Cadastro");
 						}else if(data=="OK"){
 							$.mobile.changePage("cadastro-obrigado.html", { transition: "fade", changeHash: false });
 						}else{
