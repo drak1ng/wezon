@@ -51,7 +51,7 @@
 				
 				var app_id = window.localStorage.getItem('app_id');
 				
-				if(app_id!=""){
+				if(app_id!="" && app_id!=null){
 					alert(app_id);
 					$.mobile.changePage("home.html", { transition: "fade", changeHash: false });
 				}
