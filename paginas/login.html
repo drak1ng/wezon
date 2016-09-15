@@ -52,7 +52,6 @@
 				var app_id = window.localStorage.getItem('app_id');
 				
 				if(app_id!="" && app_id!=null){
-					alert(app_id);
 					$.mobile.changePage("home.html", { transition: "fade", changeHash: false });
 				}
 				
@@ -68,7 +67,7 @@
 					
 					$.get("http://wezon.com.br/app_api/login.php", { email:email, senha:senha }, function(data){
 						if(data=="ERRO"){
-							alert("O E-mail ou a Senha utilizados não são válidos");
+							alert("O Celular ou a Senha utilizados não são válidos");
 						}else{
 							window.localStorage.setItem('id_usuarios',data);
 							$.mobile.changePage("home.html", { transition: "fade", changeHash: false });
