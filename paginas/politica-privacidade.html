@@ -48,14 +48,19 @@
 		    </div>
 
 			<div role="main" class="ui-content">
-				<div id="id_conteudo_cadastro" style="text-align:center; padding:100px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
-					Em Desenvolvimento
+				<div id="id_politica_privacidade" style="text-align:center; padding:100px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
+					<div style="padding-top:120px; text-align:center; font-size:13px;">
+						<img src="../img/loading.gif" width="110" height="10" /><br><br>
+						Aguarde carregando...
+					</div>
 				</div>
 			</div>
 		
 			
 			<script>
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
+				
+				$.get("http://wezon.com.br/app_api/politica_privacidade.php", function(data){ $("#id_politica_privacidade").html(data); });
 				
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();

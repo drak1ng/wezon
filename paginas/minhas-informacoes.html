@@ -43,19 +43,24 @@
 				    <div style="margin:0px 50px; text-align:center;"><img src="../img/logo.png" alt="logo2" height="32" /></div>
 				</div>
 			    <div class="titulo_tela">
-					<div style='margin:0px 80px;'>INFORMAÇÕES</div>
+					<div style='margin:0px 10px;'>MINHAS INFORMAÇÕES</div>
 				</div>
 		    </div>
 
 			<div role="main" class="ui-content">
-				<div id="id_conteudo_cadastro" style="text-align:center; padding:100px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
-					Em Desenvolvimento
+				<div id="id_minhas_informacoes" style="text-align:center; padding:100px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
+					<div style="padding-top:120px; text-align:center; font-size:13px;">
+						<img src="../img/loading.gif" width="110" height="10" /><br><br>
+						Aguarde carregando...
+					</div>
 				</div>
 			</div>
 		
 			
 			<script>
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
+				
+				$.get("http://wezon.com.br/app_api/minhas_informacoes.php", function(data){ $("#id_minhas_informacoes").html(data); });
 				
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();
