@@ -1,0 +1,26 @@
+<div class="menu_lateral_botao"></div>
+<div class="menu_lateral_titulo">Acesso Rápido</div>
+<div style="clear:both;"></div>
+<div class="menu_lateral_link01">Minha Agênda</div>
+<div class="menu_lateral_link02">Mapa</div>
+<div class="menu_lateral_link03">Meus Fornecedores</div>
+<div class="menu_lateral_link04">Buscar Fornecedor</div>
+<div class="menu_lateral_link05">Mensagens</div>
+<div class="menu_lateral_link06">Minhas Informações</div>
+<div class="menu_lateral_link07">Política de Privacidade</div>
+<div class="menu_lateral_link08">Termos de Uso</div>
+<div class="menu_lateral_link09">Sair</div>
+<script>
+	$('.menu_lateral_botao').click(function(){
+	    $('.menu_lateral').hide();
+	});
+	$('.menu_lateral_link01').click(function(){ $.mobile.changePage("agenda.html", { transition: "fade", changeHash: false }); });
+	$('.menu_lateral_link02').click(function(){ $.mobile.changePage("mapa.html", { transition: "fade", changeHash: false }); });
+	$('.menu_lateral_link03').click(function(){ $.mobile.changePage("fornecedores.html", { transition: "fade", changeHash: false }); });
+	$('.menu_lateral_link04').click(function(){ $.mobile.changePage("fornecedores-busca.html", { transition: "fade", changeHash: false }); });
+	$('.menu_lateral_link05').click(function(){ $.mobile.changePage("mensagens.html", { transition: "fade", changeHash: false }); });
+	$('.menu_lateral_link06').click(function(){ $.mobile.changePage("minhas-informacoes.html", { transition: "fade", changeHash: false }); });
+	$('.menu_lateral_link07').click(function(){ $.mobile.changePage("politica-privacidade.html", { transition: "fade", changeHash: false }); });
+	$('.menu_lateral_link08').click(function(){ $.mobile.changePage("termos-uso.html", { transition: "fade", changeHash: false }); });
+	$('.menu_lateral_link09').click(function(){ window.localStorage.setItem('id_usuarios',''); $.mobile.changePage("login.html", { transition: "fade", changeHash: false }); });
+</script>

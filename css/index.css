@@ -144,7 +144,7 @@ h1 {
 .topo .logotipo {
 	background:#671464;
 	text-align:center;
-	padding:35px 10px 9px 10px;
+	padding:30px 10px 5px 10px;
 	text-shadow: none;
 	text-transform: none;
 }
@@ -153,9 +153,10 @@ h1 {
 	text-align:center;
 	font-weight:bold;
 	color:#FFF;
-	background:#444;
-	padding:10px 0px 6px 0px;
-	font-size:20px;
+	background:#303030;
+	padding:8px 0px 8px 0px;
+	font-size:18px;
+	font-weight: normal;
 	text-shadow:none !important;
 }
 
@@ -303,6 +304,19 @@ h1 {
 	line-height:22px;
 	
 }
+
+.menu_lateral				{ background:#202020; width:260px; height:100%; position:fixed; top:0px; left:0px; z-index:999999; display:none; padding-top:25px; -webkit-box-shadow: 0 0 12px 0 rgba(0,0,0,0.4); box-shadow: 0 0 12px 0 rgba(0,0,0,0.4); }
+.menu_lateral_botao			{ width:40px; height:40px; background:url(../img/001.png) center center no-repeat #202020; float:right; margin-top:13px; margin-right:-36px; border-radius:0px 8px 8px 0px; }
+.menu_lateral_titulo		{ font-size:18px; min-width:10px; float:left; color:#FFF; padding:20px 0px 20px 20px;  text-shadow:none; }
+.menu_lateral_link01		{ border-top:1px solid #393939; padding:13px 0px 13px 45px; font-size:14px; color:#FFF; font-weight:normal; background:url(../img/icon_01.png) left center no-repeat; text-transform:none; text-shadow:none; }
+.menu_lateral_link02		{ border-top:1px solid #393939; padding:13px 0px 13px 45px; font-size:14px; color:#FFF; font-weight:normal; background:url(../img/icon_02.png) left center no-repeat; text-transform:none; text-shadow:none; }
+.menu_lateral_link03		{ border-top:1px solid #393939; padding:13px 0px 13px 45px; font-size:14px; color:#FFF; font-weight:normal; background:url(../img/icon_03.png) left center no-repeat; text-transform:none; text-shadow:none; }
+.menu_lateral_link04		{ border-top:1px solid #393939; padding:13px 0px 13px 45px; font-size:14px; color:#FFF; font-weight:normal; background:url(../img/icon_04.png) left center no-repeat; text-transform:none; text-shadow:none; }
+.menu_lateral_link05		{ border-top:1px solid #393939; padding:13px 0px 13px 45px; font-size:14px; color:#FFF; font-weight:normal; background:url(../img/icon_05.png) left center no-repeat; text-transform:none; text-shadow:none; }
+.menu_lateral_link06		{ border-top:1px solid #393939; padding:13px 0px 13px 45px; font-size:14px; color:#FFF; font-weight:normal; background:url(../img/icon_06.png) left center no-repeat; text-transform:none; text-shadow:none; }
+.menu_lateral_link07		{ border-top:1px solid #393939; padding:13px 0px 13px 45px; font-size:14px; color:#FFF; font-weight:normal; background:url(../img/icon_07.png) left center no-repeat; text-transform:none; text-shadow:none; }
+.menu_lateral_link08		{ border-top:1px solid #393939; padding:13px 0px 13px 45px; font-size:14px; color:#FFF; font-weight:normal; background:url(../img/icon_08.png) left center no-repeat; text-transform:none; text-shadow:none; }
+.menu_lateral_link09		{ border-top:1px solid #393939; padding:13px 0px 13px 45px; font-size:14px; color:#FFF; font-weight:normal; background:url(../img/icon_09.png) left center no-repeat; text-transform:none; text-shadow:none; }
 
 
 .ui-content { margin-top:20px !important; }
