@@ -32,6 +32,9 @@
         <title>Wezon</title>
 		<script type="text/javascript" src="../js/jquery.min.js"></script>
 		<script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="../js/moment-with-locales.js"></script>
+		<script type="text/javascript" src="../js/clndr.min.js"></script>
+		<script type="text/javascript" src="../js/underscore.js"></script>
 		<script type="text/javascript" src="../js/cordova.js"></script>
 	</head>
     <body>
@@ -48,8 +51,8 @@
 		    </div>
 
 			<div role="main" class="ui-content">
-				<div id="id_conteudo_cadastro" style="text-align:center; padding:100px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
-					Em Desenvolvimento
+				<div id="id_conteudo_cadastro" style="text-align:center; padding:75px 0px 0px 0px; margin:0px -16px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
+					<div class="cal1"></div>
 				</div>
 			</div>
 		
@@ -60,6 +63,143 @@
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();
 			    });
+				
+				// Call this from the developer console and you can control both instances
+				var calendars = {};
+				
+				(function (factory) {
+				    if (typeof define === 'function' && define.amd) {
+				        define(['moment'], factory); // AMD
+				    } else if (typeof exports === 'object') {
+				        module.exports = factory(require('../moment')); // Node
+				    } else {
+				        factory(window.moment); // Browser global
+				    }
+				}(function (moment) {
+				    return moment.defineLocale('pt-br', {
+				        months : 'Janeiro_Fevereiro_Março_Abril_Maio_Junho_Julho_Agosto_Setembro_Outubro_Novembro_Dezembro'.split('_'),
+				        monthsShort : 'Jan_Fev_Mar_Abr_Mai_Jun_Jul_Ago_Set_Out_Nov_Dez'.split('_'),
+				        weekdays : 'Domingo_Segunda-Feira_Terça-Feira_Quarta-Feira_Quinta-Feira_Sexta-Feira_Sábado'.split('_'),
+				        weekdaysShort : 'Dom_Seg_Ter_Qua_Qui_Sex_Sáb'.split('_'),
+				        weekdaysMin : 'D_S_T_Q_Q_S_S'.split('_'),
+				        longDateFormat : {
+				            LT : 'HH:mm',
+				            L : 'DD/MM/YYYY',
+				            LL : 'D [de] MMMM [de] YYYY',
+				            LLL : 'D [de] MMMM [de] YYYY [às] LT',
+				            LLLL : 'dddd, D [de] MMMM [de] YYYY [às] LT'
+				        },
+				        calendar : {
+				            sameDay: '[Hoje às] LT',
+				            nextDay: '[Amanhã às] LT',
+				            nextWeek: 'dddd [às] LT',
+				            lastDay: '[Ontem às] LT',
+				            lastWeek: function () {
+				                return (this.day() === 0 || this.day() === 6) ?
+				                    '[Último] dddd [às] LT' : // Saturday + Sunday
+				                    '[Última] dddd [às] LT'; // Monday - Friday
+				            },
+				            sameElse: 'L'
+				        },
+				        relativeTime : {
+				            future : 'em %s',
+				            past : '%s atrás',
+				            s : 'segundos',
+				            m : 'um minuto',
+				            mm : '%d minutos',
+				            h : 'uma hora',
+				            hh : '%d horas',
+				            d : 'um dia',
+				            dd : '%d dias',
+				            M : 'um mês',
+				            MM : '%d meses',
+				            y : 'um ano',
+				            yy : '%d anos'
+				        },
+				        ordinal : '%dº'
+				    });
+				}));
+				
+				$(document).ready( function() {
+				    var thisMonth = moment().format('YYYY-MM');
+				    var eventArray = [
+				        {
+				            title: 'Multi-Day Event',
+				            endDate: thisMonth + '-14',
+				            startDate: thisMonth + '-10'
+				        }, {
+				            endDate: thisMonth + '-23',
+				            startDate: thisMonth + '-21',
+				            title: 'Another Multi-Day Event'
+				        }, {
+				            date: thisMonth + '-27',
+				            title: 'Single Day Event'
+				        }
+				    ];
+				    
+				    calendars.clndr1 = $('.cal1').clndr({
+				        events: eventArray,
+				        clickEvents: {
+				            click: function (target) {
+				                console.log('Cal-1 clicked: ', target);
+				            },
+				            today: function () {
+				                console.log('Cal-1 today');
+				            },
+				            nextMonth: function () {
+				                console.log('Cal-1 next month');
+				            },
+				            previousMonth: function () {
+				                console.log('Cal-1 previous month');
+				            },
+				            onMonthChange: function () {
+				                console.log('Cal-1 month changed');
+				            },
+				            nextYear: function () {
+				                console.log('Cal-1 next year');
+				            },
+				            previousYear: function () {
+				                console.log('Cal-1 previous year');
+				            },
+				            onYearChange: function () {
+				                console.log('Cal-1 year changed');
+				            },
+				            nextInterval: function () {
+				                console.log('Cal-1 next interval');
+				            },
+				            previousInterval: function () {
+				                console.log('Cal-1 previous interval');
+				            },
+				            onIntervalChange: function () {
+				                console.log('Cal-1 interval changed');
+				            }
+				        },
+				        multiDayEvents: {
+				            singleDay: 'date',
+				            endDate: 'endDate',
+				            startDate: 'startDate'
+				        },
+				        showAdjacentMonths: true,
+				        adjacentDaysChangeMonth: false
+				    });
+				
+				    // Bind all clndrs to the left and right arrow keys
+				    $(document).keydown( function(e) {
+				        // Left arrow
+				        if (e.keyCode == 37) {
+				            calendars.clndr1.back();
+				            calendars.clndr2.back();
+				            calendars.clndr3.back();
+				        }
+				
+				        // Right arrow
+				        if (e.keyCode == 39) {
+				            calendars.clndr1.forward();
+				            calendars.clndr2.forward();
+				            calendars.clndr3.forward();
+				        }
+				    });
+				});
 				
 			</script>
 		
