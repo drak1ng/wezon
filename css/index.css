@@ -330,11 +330,174 @@ h1 {
  a.sm2_paused {}
  a.sm2_paused:hover {}
 
+.msg_sem_tarega				{ margin:15px; border:1px solid #CCC; background:#FFF; border-radius:3px; padding:15px; text-align:center; }
+
+.lista_agenda				{ margin-bottom:-16px; }
+
+.lista-terefas				{ border-bottom:1px solid #CCC; background:#FFF; padding:15px; text-align:left; }
+.lista-terefas-titulo		{ font-size:16px; color:#000; font-weight:bold; margin-bottom:10px; line-height:19px; }
+.lista-terefas-data			{ min-width:10px; float:left; padding:0px 20px 5px 20px; font-size:12px; color:#777; background:url(../img/002.png) left top no-repeat; }
+.lista-terefas-hora			{ min-width:10px; float:left; padding:0px 20px 5px 20px; font-size:12px; color:#777; background:url(../img/003.png) left top no-repeat; }
+.lista-terefas-local		{ padding:0px 0px 0px 20px; font-size:12px; color:#777; background:url(../img/004.png) left top no-repeat; }
+
+.tarefa-bloco1				{ background:#ebebeb; text-align:center; padding:10px 5px; text-transform:uppercase; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.tarefa-bloco2				{ height:40px; padding:1px 0px; background:#CCC; }
+.tarefa-bloco2-aba1			{ height:40px; background:url(../img/005.png) center center no-repeat #DDD; width:33.3333%; float:left; }
+.tarefa-bloco2-aba2			{ height:40px; background:url(../img/006.png) center center no-repeat #DDD; width: calc(33.3333% - 2px); float:left; border-left:1px solid #CCC; border-right:1px solid #CCC; }
+.tarefa-bloco2-aba3			{ height:40px; background:url(../img/007.png) center center no-repeat #DDD; width:33.3333%; float:left; }
+.tarefa-bloco2-aba1-on		{ height:41px; background:url(../img/008.png) center center no-repeat #FFF; width:33.3333%; float:left; }
+.tarefa-bloco2-aba2-on		{ height:41px; background:url(../img/009.png) center center no-repeat #FFF; width: calc(33.3333% - 2px); float:left; border-left:1px solid #CCC; border-right:1px solid #CCC; }
+.tarefa-bloco2-aba3-on		{ height:41px; background:url(../img/010.png) center center no-repeat #FFF; width:33.3333%; float:left; }
+.tarefa-bloco3				{ width: calc(100% - 30px); height: calc(100% - 221px); background:#FFF; padding:15px; color:#000; font-size:13px; position:fixed; left:0px; bottom:0px; line-height:24px; overflow:scroll; }
+.tarefa-bloco4				{ width: calc(100% - 30px); height: calc(100% - 221px); background:#FFF; padding:15px; color:#000; font-size:13px; position:fixed; left:0px; bottom:0px; line-height:24px; overflow:scroll; display:none; }
+.tarefa-bloco5				{ width: calc(100% - 30px); height: calc(100% - 221px); background:#FFF; padding:15px; color:#000; font-size:13px; position:fixed; left:0px; bottom:0px; line-height:24px; overflow:scroll; display:none; }
 
 
 
+.mensagem {
+	width:100%;
+	height:100%;
+	background-color:rgba(255,255,255,0.8);
+	position:fixed;
+	z-index:9999;
+	top:0;
+	left:0;
+	display:none;
+}
 
+.mensagem .mensagem_ajax {
+	width:380px;
+	min-height:100px;
+	position:absolute;
+	margin-top:-80px;
+	margin-left:-190px;
+	top:50%;
+	left:50%;
+	background:#FFF;
+	-webkit-box-shadow: 0px 1px 10px 4px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 1px 10px 4px rgba(0, 0, 0, 0.3);
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	font-family:verdana;
+	font-size:12px;
+	color:#555;
+}
 
+.mensagem .botao_alerta {
+	border:1px solid #666;
+	background:#FFF;
+	min-width:10px;
+	padding:7px 10px;
+	margin:5px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	font-family:verdana;
+	font-size:12px;
+	color:#333;
+	cursor:pointer;
+}
+
+.mensagem .botao_alerta:hover {
+	background:#666;
+	color:#FFF;
+}
+
+.barra-ecrever-mensagem	{
+	position:fixed;
+	bottom: 0px;
+	right: 0px;
+	background:#FFF;
+	border-top:1px solid #CCC;
+	height:50px;
+	width: calc(100% - 0px);
+}
+
+.barra-ecrever-mensagem input[type=text] {
+	width: calc(100% - 125px);
+	border:0px;
+	background:#FFF;
+	padding:16px;
+	font-family:arial;
+	font-size:14px;
+	outline:none;
+}
+
+.barra-ecrever-mensagem input[type=submit] {
+	border-radius:6px;
+	border:0px;
+	background:#8b1;
+	padding: 8px 0px;
+	text-align:center;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFF;
+    width:66px;
+    float:right;
+    margin:8px 7px 0px 0px
+}
+
+.mensagens-bloco {
+	height: calc(100% - 90px);
+	padding:0px;
+	overflow-y: scroll;
+}
+
+.mensagens-bloco-mensagens1 {
+	border-radius:8px;
+	border:1px solid #CCC;
+	background:#FFF;
+	padding:5px 10px;
+	min-width:10px;
+	max-width:280px;
+	margin:5px 0px;
+	float:left;
+}
+
+.mensagens-bloco-mensagens1 b {
+	margin:0px;
+	padding:0px;
+}
+
+.mensagens-bloco-mensagens1 p {
+	margin:0px;
+	padding:5px 0px 5px 0px;
+}
+
+.mensagens-bloco-mensagens1 span {
+	margin:0px;
+	padding:0px;
+	font-size:10px;
+	color:#999;
+}
+
+.mensagens-bloco-mensagens2 {
+	border-radius:8px;
+	border:1px solid #d2c1d0;
+	background:#f0e7ef;
+	padding:5px 10px;
+	min-width:10px;
+	max-width:400px;
+	margin:5px 0px;
+	float:right;
+}
+
+.mensagens-bloco-mensagens2 b {
+	margin:0px;
+	padding:0px;
+}
+
+.mensagens-bloco-mensagens2 p {
+	margin:0px;
+	padding:5px 0px 5px 0px;
+}
+
+.mensagens-bloco-mensagens2 span {
+	margin:0px;
+	padding:0px;
+	font-size:10px;
+	color:#999;
+}
 
 .clearfix:after {
   content: ".";

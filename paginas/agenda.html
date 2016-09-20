@@ -50,7 +50,7 @@
 				</div>
 		    </div>
 
-			<div role="main" class="ui-content">
+			<div role="main" class="ui-content" style="background:#e4e4e4;">
 				<div id="id_conteudo_cadastro" style="text-align:center; padding:75px 0px 0px 0px; margin:0px -16px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
 					<div class="cal1"></div>
 					<div class="lista_agenda"></div>
@@ -59,17 +59,19 @@
 		
 			
 			<script>
+				var id_usuarios = window.localStorage.getItem('id_usuarios');
+				var nome_usuarios = window.localStorage.getItem('nome_usuarios');
+				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
+
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
+				
+				$.get("http://wezon.com.br/app_api/agenda.php", { id_usuario:id_usuarios, tipo_usuarios:tipo_usuarios }, function(data){ $(".lista_agenda").html(data); });
 				
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();
 			    });
 				
-				var id_usuarios = window.localStorage.getItem('id_usuarios');
-				var nome_usuarios = window.localStorage.getItem('nome_usuarios');
-				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
-				
-				$('.lista_agenda').html(id_usuarios+"<br>"+nome_usuarios+"<br>"+tipo_usuarios);
+
 				
 				// Call this from the developer console and you can control both instances
 				var calendars = {};
@@ -131,54 +133,16 @@
 				    var thisMonth = moment().format('YYYY-MM');
 				    var eventArray = [
 				        {
-				            title: 'Multi-Day Event',
-				            endDate: thisMonth + '-14',
-				            startDate: thisMonth + '-10'
-				        }, {
-				            endDate: thisMonth + '-23',
-				            startDate: thisMonth + '-21',
-				            title: 'Another Multi-Day Event'
-				        }, {
 				            date: thisMonth + '-27',
 				            title: 'Single Day Event'
 				        }
 				    ];
 				    
 				    calendars.clndr1 = $('.cal1').clndr({
-				        events: eventArray,
+				        //events: eventArray,
 				        clickEvents: {
 				            click: function (target) {
-				                console.log('Cal-1 clicked: ', target);
-				            },
-				            today: function () {
-				                console.log('Cal-1 today');
-				            },
-				            nextMonth: function () {
-				                console.log('Cal-1 next month');
-				            },
-				            previousMonth: function () {
-				                console.log('Cal-1 previous month');
-				            },
-				            onMonthChange: function () {
-				                console.log('Cal-1 month changed');
-				            },
-				            nextYear: function () {
-				                console.log('Cal-1 next year');
-				            },
-				            previousYear: function () {
-				                console.log('Cal-1 previous year');
-				            },
-				            onYearChange: function () {
-				                console.log('Cal-1 year changed');
-				            },
-				            nextInterval: function () {
-				                console.log('Cal-1 next interval');
-				            },
-				            previousInterval: function () {
-				                console.log('Cal-1 previous interval');
-				            },
-				            onIntervalChange: function () {
-				                console.log('Cal-1 interval changed');
+								$.get("http://wezon.com.br/app_api/agenda.php", { id_usuario:id_usuarios, tipo_usuarios:tipo_usuarios, data:target.date._i }, function(data){ $(".lista_agenda").html(data); });
 				            }
 				        },
 				        multiDayEvents: {
