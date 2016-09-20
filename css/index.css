@@ -349,7 +349,7 @@ h1 {
 .tarefa-bloco2-aba2-on		{ height:41px; background:url(../img/009.png) center center no-repeat #FFF; width: calc(33.3333% - 2px); float:left; border-left:1px solid #CCC; border-right:1px solid #CCC; }
 .tarefa-bloco2-aba3-on		{ height:41px; background:url(../img/010.png) center center no-repeat #FFF; width:33.3333%; float:left; }
 .tarefa-bloco3				{ width: calc(100% - 30px); height: calc(100% - 221px); background:#FFF; padding:15px; color:#000; font-size:13px; position:fixed; left:0px; bottom:0px; line-height:24px; overflow:scroll; }
-.tarefa-bloco4				{ width: calc(100% - 30px); height: calc(100% - 221px); background:#FFF; padding:15px; color:#000; font-size:13px; position:fixed; left:0px; bottom:0px; line-height:24px; overflow:scroll; display:none; }
+.tarefa-bloco4				{ width: calc(100% - 0px); height: calc(100% - 191px); background:#FFF; padding:0px; color:#000; font-size:13px; position:fixed; left:0px; bottom:0px; line-height:24px; overflow:scroll; display:none; }
 .tarefa-bloco5				{ width: calc(100% - 30px); height: calc(100% - 221px); background:#FFF; padding:15px; color:#000; font-size:13px; position:fixed; left:0px; bottom:0px; line-height:24px; overflow:scroll; display:none; }
 
 
@@ -438,9 +438,10 @@ h1 {
 }
 
 .mensagens-bloco {
-	height: calc(100% - 90px);
-	padding:0px;
+	height: calc(100% - 71px);
+	padding:10px;
 	overflow-y: scroll;
+	line-height:18px;
 }
 
 .mensagens-bloco-mensagens1 {
@@ -449,7 +450,7 @@ h1 {
 	background:#FFF;
 	padding:5px 10px;
 	min-width:10px;
-	max-width:280px;
+	max-width:260px;
 	margin:5px 0px;
 	float:left;
 }
@@ -477,7 +478,7 @@ h1 {
 	background:#f0e7ef;
 	padding:5px 10px;
 	min-width:10px;
-	max-width:400px;
+	max-width:260px;
 	margin:5px 0px;
 	float:right;
 }
