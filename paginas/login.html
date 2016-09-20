@@ -69,7 +69,10 @@
 						if(data=="ERRO"){
 							alert("O Celular ou a Senha utilizados não são válidos");
 						}else{
-							window.localStorage.setItem('id_usuarios',data);
+							var res = data.split(";");
+							window.localStorage.setItem('id_usuarios',res[0]);
+							window.localStorage.setItem('nome_usuarios',res[1]);
+							window.localStorage.setItem('tipo_usuarios',res[2]);
 							$.mobile.changePage("home.html", { transition: "fade", changeHash: false });
 						}
 					});

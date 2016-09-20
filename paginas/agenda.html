@@ -53,6 +53,7 @@
 			<div role="main" class="ui-content">
 				<div id="id_conteudo_cadastro" style="text-align:center; padding:75px 0px 0px 0px; margin:0px -16px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
 					<div class="cal1"></div>
+					<div class="lista_agenda"></div>
 				</div>
 			</div>
 		
@@ -63,6 +64,12 @@
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();
 			    });
+				
+				var id_usuarios = window.localStorage.getItem('id_usuarios');
+				var nome_usuarios = window.localStorage.getItem('nome_usuarios');
+				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
+				
+				$('.lista_agenda').html(id_usuarios+"<br>"+nome_usuarios+"<br>"+tipo_usuarios);
 				
 				// Call this from the developer console and you can control both instances
 				var calendars = {};
