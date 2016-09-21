@@ -47,8 +47,13 @@
 		    </div>
 
 			<div role="main" class="ui-content">
-				<div id="id_conteudo_cadastro" style="text-align:center; padding:100px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
-					Em Desenvolvimento
+				<div id="id_conteudo_home" style="text-align:center; padding:100px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
+					<div class="home-botao1">Agenda</div>
+					<div class="home-botao2">Mapa</div>
+					<div class="home-botao3">Fornecedores</div>
+					<div class="home-botao4">Mensagens</div>
+					<div class="home-botao5">Meus Dados</div>
+					<div class="home-botao6">Sair</div>
 				</div>
 			</div>
 		
@@ -60,6 +65,17 @@
 				    $('.menu_lateral').show();
 			    });
 				
+				$('.home-botao1').click(function(){ $.mobile.changePage("agenda.html", { transition: "fade", changeHash: false }); });
+				$('.home-botao2').click(function(){ $.mobile.changePage("mapa.html", { transition: "fade", changeHash: false }); });
+				$('.home-botao3').click(function(){ $.mobile.changePage("fornecedores.html", { transition: "fade", changeHash: false }); });
+				$('.home-botao4').click(function(){ $.mobile.changePage("mensagens.html", { transition: "fade", changeHash: false }); });
+				$('.home-botao5').click(function(){ $.mobile.changePage("minhas-informacoes.html", { transition: "fade", changeHash: false }); });
+				$('.home-botao6').click(function(){
+					if(confirm("Tem certeza que deseja sair?")){
+						window.localStorage.setItem('id_usuarios','');
+						$.mobile.changePage("login.html", { transition: "fade", changeHash: false });
+					}
+				});
 			</script>
 		
 		</div>

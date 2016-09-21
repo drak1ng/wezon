@@ -1,7 +1,8 @@
 <div class="menu_lateral_botao"></div>
 <div class="menu_lateral_titulo">Acesso Rápido</div>
 <div style="clear:both;"></div>
-<div class="menu_lateral_link01">Minha Agênda</div>
+<div class="menu_lateral_link10">Home</div>
+<div class="menu_lateral_link01">Minha Agenda</div>
 <div class="menu_lateral_link02">Mapa</div>
 <div class="menu_lateral_link03">Meus Fornecedores</div>
 <div class="menu_lateral_link04">Buscar Fornecedor</div>
@@ -14,6 +15,7 @@
 	$('.menu_lateral_botao').click(function(){
 	    $('.menu_lateral').hide();
 	});
+	$('.menu_lateral_link10').click(function(){ $.mobile.changePage("home.html", { transition: "fade", changeHash: false }); });
 	$('.menu_lateral_link01').click(function(){ $.mobile.changePage("agenda.html", { transition: "fade", changeHash: false }); });
 	$('.menu_lateral_link02').click(function(){ $.mobile.changePage("mapa.html", { transition: "fade", changeHash: false }); });
 	$('.menu_lateral_link03').click(function(){ $.mobile.changePage("fornecedores.html", { transition: "fade", changeHash: false }); });
