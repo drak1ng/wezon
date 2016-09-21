@@ -323,12 +323,12 @@ h1 {
 .menu_lateral_link08		{ border-top:1px solid #393939; padding:13px 0px 13px 45px; font-size:14px; color:#FFF; font-weight:normal; background:url(../img/icon_08.png) left center no-repeat; text-transform:none; text-shadow:none; }
 .menu_lateral_link09		{ border-top:1px solid #393939; padding:13px 0px 13px 45px; font-size:14px; color:#FFF; font-weight:normal; background:url(../img/icon_09.png) left center no-repeat; text-transform:none; text-shadow:none; }
 
-.home-botao1				{ background:url(../img/home_01.png) center 10px no-repeat #671464; background-size:76px; text-align:center; padding:80px 0px 20px 0px; color:#FFF; width: calc(50% - 5px); margin-bottom:10px; text-shadow:none; border-radius:6px; float:left; }
-.home-botao2				{ background:url(../img/home_02.png) center 10px no-repeat #671464; background-size:76px; text-align:center; padding:80px 0px 20px 0px; color:#FFF; width: calc(50% - 5px); margin-bottom:10px; text-shadow:none; border-radius:6px; float:right; }
-.home-botao3				{ background:url(../img/home_03.png) center 10px no-repeat #671464; background-size:76px; text-align:center; padding:80px 0px 20px 0px; color:#FFF; width: calc(50% - 5px); margin-bottom:10px; text-shadow:none; border-radius:6px; float:left; }
-.home-botao4				{ background:url(../img/home_04.png) center 10px no-repeat #671464; background-size:76px; text-align:center; padding:80px 0px 20px 0px; color:#FFF; width: calc(50% - 5px); margin-bottom:10px; text-shadow:none; border-radius:6px; float:right; }
-.home-botao5				{ background:url(../img/home_05.png) center 10px no-repeat #671464; background-size:76px; text-align:center; padding:80px 0px 20px 0px; color:#FFF; width: calc(50% - 5px); margin-bottom:10px; text-shadow:none; border-radius:6px; float:left; }
-.home-botao6				{ background:url(../img/home_06.png) center 10px no-repeat #671464; background-size:76px; text-align:center; padding:80px 0px 20px 0px; color:#FFF; width: calc(50% - 5px); margin-bottom:10px; text-shadow:none; border-radius:6px; float:right; }
+.home-botao1				{ background:url(../img/home_01.png) center 10px no-repeat #671464; background-size:76px; text-align:center; padding:80px 0px 20px 0px; color:#FFF; width: calc(50% - 10px); margin-bottom:10px; text-shadow:none; border-radius:6px; float:left; margin-left:10px; }
+.home-botao2				{ background:url(../img/home_02.png) center 10px no-repeat #671464; background-size:76px; text-align:center; padding:80px 0px 20px 0px; color:#FFF; width: calc(50% - 10px); margin-bottom:10px; text-shadow:none; border-radius:6px; float:left; margin-left:10px; }
+.home-botao3				{ background:url(../img/home_03.png) center 10px no-repeat #671464; background-size:76px; text-align:center; padding:80px 0px 20px 0px; color:#FFF; width: calc(50% - 10px); margin-bottom:10px; text-shadow:none; border-radius:6px; float:left; margin-left:10px; }
+.home-botao4				{ background:url(../img/home_04.png) center 10px no-repeat #671464; background-size:76px; text-align:center; padding:80px 0px 20px 0px; color:#FFF; width: calc(50% - 10px); margin-bottom:10px; text-shadow:none; border-radius:6px; float:left; margin-left:10px; }
+.home-botao5				{ background:url(../img/home_05.png) center 10px no-repeat #671464; background-size:76px; text-align:center; padding:80px 0px 20px 0px; color:#FFF; width: calc(50% - 10px); margin-bottom:10px; text-shadow:none; border-radius:6px; float:left; margin-left:10px; }
+.home-botao6				{ background:url(../img/home_06.png) center 10px no-repeat #671464; background-size:76px; text-align:center; padding:80px 0px 20px 0px; color:#FFF; width: calc(50% - 10px); margin-bottom:10px; text-shadow:none; border-radius:6px; float:left; margin-left:10px; }
 
 .ui-content { margin-top:20px !important; }
 

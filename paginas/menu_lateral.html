@@ -12,6 +12,10 @@
 <div class="menu_lateral_link08">Termos de Uso</div>
 <div class="menu_lateral_link09">Sair</div>
 <script>
+	var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
+				
+	if(tipo_usuarios!="COLABORADOR"){ $('.menu_lateral_link05').hide(); }
+				
 	$('.menu_lateral_botao').click(function(){
 	    $('.menu_lateral').hide();
 	});

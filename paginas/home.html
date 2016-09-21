@@ -47,7 +47,7 @@
 		    </div>
 
 			<div role="main" class="ui-content">
-				<div id="id_conteudo_home" style="text-align:center; padding:100px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
+				<div id="id_conteudo_home" style="text-align:center; padding:100px 0px 0px 0px; margin-left:-10px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
 					<div class="home-botao1">Agenda</div>
 					<div class="home-botao2">Mapa</div>
 					<div class="home-botao3">Fornecedores</div>
@@ -59,6 +59,11 @@
 		
 			
 			<script>
+				
+				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
+				
+				if(tipo_usuarios!="COLABORADOR"){ $('.home-botao4').hide(); }
+				
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
 				
 				$('.menu_lateral_botao_abrir').click(function(){
