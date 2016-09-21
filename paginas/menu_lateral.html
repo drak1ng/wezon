@@ -29,9 +29,9 @@
 	$('.menu_lateral_link07').click(function(){ $.mobile.changePage("politica-privacidade.html", { transition: "fade", changeHash: false }); });
 	$('.menu_lateral_link08').click(function(){ $.mobile.changePage("termos-uso.html", { transition: "fade", changeHash: false }); });
 	$('.menu_lateral_link09').click(function(){
-		if(confirm("Tem certeza que deseja sair?")){
+
 			window.localStorage.setItem('id_usuarios','');
 			$.mobile.changePage("login.html", { transition: "fade", changeHash: false });
-		}
+
 	});
 </script>

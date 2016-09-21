@@ -76,10 +76,8 @@
 				$('.home-botao4').click(function(){ $.mobile.changePage("mensagens.html", { transition: "fade", changeHash: false }); });
 				$('.home-botao5').click(function(){ $.mobile.changePage("minhas-informacoes.html", { transition: "fade", changeHash: false }); });
 				$('.home-botao6').click(function(){
-					if(confirm("Tem certeza que deseja sair?")){
 						window.localStorage.setItem('id_usuarios','');
 						$.mobile.changePage("login.html", { transition: "fade", changeHash: false });
-					}
 				});
 			</script>
 		
