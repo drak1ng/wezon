@@ -438,7 +438,7 @@ h1 {
 .barra-ecrever-mensagem input[type=submit] {
 	border-radius:6px;
 	border:0px;
-	background:#8b1;
+	background:#671464;
 	padding: 8px 0px;
 	text-align:center;
     font-family: 'Droid Sans', sans-serif;
@@ -738,4 +738,26 @@ html[xmlns] .clearfix {
 .clndr-previous-year-button.inactive {
   opacity: 0.5;
   cursor: default;
+}
+
+.clndr-next-button {
+	text-align:center;
+	width:38px;
+	height:18px;
+	padding:10px 0px;
+	background:#892886;
+	display:block;
+	float:right;
+	margin:-10px;
+}
+
+.clndr-previous-button {
+	text-align:center;
+	width:38px;
+	height:18px;
+	padding:10px 0px;
+	background:#892886;
+	display:block;
+	float:left;
+	margin:-10px;
 }

@@ -57,9 +57,14 @@
 		
 			
 			<script>
+				
+				var id_usuarios = window.localStorage.getItem('id_usuarios');
+				var nome_usuarios = window.localStorage.getItem('nome_usuarios');
+				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
+				
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
 				
-				$.get("http://wezon.com.br/app_api/minhas_informacoes.php", function(data){ $("#id_minhas_informacoes").html(data); });
+				$.get("http://wezon.com.br/app_api/minhas_informacoes.php", { id_usuarios:id_usuarios, tipo_usuarios:tipo_usuarios }, function(data){ $("#id_minhas_informacoes").html(data); });
 				
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();
