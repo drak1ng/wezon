@@ -32,6 +32,7 @@
 		<script type="text/javascript" src="../js/jquery.min.js"></script>
 		<script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js"></script>
 		<script type="text/javascript" src="../js/cordova.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBzDUzBRC8pzsWP5mTMoHX8GW4TRXZo4Q8"></script>
 	</head>
     <body>
 	    <div data-role="page" style="background:#F3F3F3;">
@@ -47,14 +48,19 @@
 		    </div>
 
 			<div role="main" class="ui-content">
-				<div id="id_conteudo_cadastro" style="text-align:center; padding:100px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
-					Em Desenvolvimento
+				<div id="id_conteudo_mapa" style="text-align:center; padding:74px 0px 0px 0px; margin:0px -16px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
+					<div style="padding-top:120px; text-align:center; font-size:13px;">
+						<img src="../img/loading.gif" width="110" height="10" /><br><br>
+						Aguarde carregando...
+					</div>
 				</div>
 			</div>
 		
 			
 			<script>
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
+				
+				$.get("http://wezon.com.br/app_api/mapa.php", function(data){ $("#id_conteudo_mapa").html(data); });
 				
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();
