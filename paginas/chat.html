@@ -42,12 +42,13 @@
 				    <div style="margin:0px 50px; text-align:center;"><img src="../img/logo.png" alt="logo2" height="32" /></div>
 				</div>
 			    <div class="titulo_tela">
-					<div style='margin:0px 80px;'>MENSAGENS</div>
+				    <div class='bt_voltar'>Voltar</div>
+					<div style='margin:0px 80px;'>Chat</div>
 				</div>
 		    </div>
 
-			<div role="main" class="ui-content" style="background:#F3F3F3;">
-				<div id="id_conteudo_mensagens" style="text-align:center; padding:74px 0px 0px 0px; margin:0px -16px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
+			<div role="main" class="ui-content" style="height:100%;">
+				<div id="id_tarefa" style="height:100%; text-align:center; padding:75px 0px 0px 0px; margin:0px -16px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
 					<div style="padding-top:120px; text-align:center; font-size:13px;">
 						<img src="../img/loading.gif" width="110" height="10" /><br><br>
 						Aguarde carregando...
@@ -57,13 +58,21 @@
 		
 			
 			<script>
+				$(".bt_voltar").click(function(){
+					$.mobile.changePage("mensagens.html", { transition: "fade", changeHash: false });
+				});
+				
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
+				
+				var id_tarefa = window.localStorage.getItem('id_tarefa');
+				var id_colaborador = window.localStorage.getItem('id_usuarios');
+				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
+				
+				$.get("http://wezon.com.br/app_api/chat.php", { id:id_tarefa, id_colaborador:id_colaborador, tipo_usuarios:tipo_usuarios }, function(data){ $("#id_tarefa").html(data); });
 				
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();
 			    });
-			    
-				$.get("http://wezon.com.br/app_api/lista_chat.php", { id_usuario:id_usuarios }, function(data){ $("#id_conteudo_mensagens").html(data); });
 				
 			</script>
 		
