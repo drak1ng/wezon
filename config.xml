@@ -107,6 +107,11 @@
 <plugin name="cordova-plugin-file-transfer" spec="1.3.0" source="pgb" />
 
 <plugin name="cordova-plugin-file" spec="3.0.0" source="pgb" />
+<preference name="AndroidPersistentFileLocation" value="Internal" />
+<preference name="AndroidPersistentFileLocation" value="Compatibility" />
+<preference name="iosPersistentFileLocation" value="Library" />
+<preference name="iosPersistentFileLocation" value="Compatibility" />
+
 <plugin name="cordova-plugin-dialogs" spec="1.1.1" source="pgb" />
 
 <!-- Device -->
