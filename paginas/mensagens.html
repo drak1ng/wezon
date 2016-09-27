@@ -57,13 +57,16 @@
 		
 			
 			<script>
+				var id_usuarios = window.localStorage.getItem('id_usuarios');
+				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
+				
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
 				
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();
 			    });
 			    
-				$.get("http://wezon.com.br/app_api/lista_chat.php", { id_usuario:id_usuarios }, function(data){ $("#id_conteudo_mensagens").html(data); });
+				$.get("http://wezon.com.br/app_api/lista_chat.php", { id_usuario:id_usuarios, tipo_usuarios:tipo_usuarios }, function(data){ $("#id_conteudo_mensagens").html(data); });
 				
 			</script>
 		

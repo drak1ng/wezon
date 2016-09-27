@@ -45,13 +45,14 @@
 				    <div style="margin:0px 50px; text-align:center;"><img src="../img/logo.png" alt="logo2" height="32" /></div>
 				</div>
 			    <div class="titulo_tela">
+					<div class="icone_botao_agenda"></div>
 					<div style='margin:0px 80px;'>AGENDA</div>
 				</div>
 		    </div>
 
 			<div role="main" class="ui-content" style="background:#e4e4e4;">
 				<div id="id_conteudo_cadastro" style="text-align:center; padding:74px 0px 0px 0px; margin:0px -16px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
-					<div class="cal1"></div>
+					<div class="cal1" style="display:none;"></div>
 					<div class="lista_agenda"></div>
 				</div>
 			</div>
@@ -68,6 +69,10 @@
 				
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();
+			    });
+			    
+			    $('.icone_botao_agenda').click(function(){
+				    $('.cal1').slideToggle();
 			    });
 				
 
