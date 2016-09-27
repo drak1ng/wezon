@@ -112,6 +112,7 @@
 <!-- Device -->
 <gap:plugin name="org.apache.cordova.device" />
 
+<plugin name="Storage" value="org.apache.cordova.Storage" />
 
 
 <!-- Teclado sobrepondo para o android, igual iphone -->
