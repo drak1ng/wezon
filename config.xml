@@ -106,13 +106,11 @@
 <!--Upload de arquivos -->
 <plugin name="cordova-plugin-file-transfer" spec="1.3.0" source="pgb" />
 
-
+<plugin name="cordova-plugin-file" spec="3.0.0" source="pgb" />
 <plugin name="cordova-plugin-dialogs" spec="1.1.1" source="pgb" />
 
 <!-- Device -->
 <gap:plugin name="org.apache.cordova.device" />
-
-<plugin name="Storage" value="org.apache.cordova.Storage" />
 
 
 <!-- Teclado sobrepondo para o android, igual iphone -->
