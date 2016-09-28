@@ -47,45 +47,7 @@
 			</div>
 			
 			<script>
-				var login_storage = "";
 				
-				 window.resolveLocalFileSystemURL(cordova.file.dataDirectory, function(dir) {
-			        console.log("got main dir",dir);
-			        dir.getFile("log.txt", {create:true}, function(file) {
-			            logOb = file;
-			        });
-			    });
-			    
-				function writeLog(str) {
-				    if(!logOb) return;
-				    var log = str + " [" + (new Date()) + "]\n";
-				    console.log("going to log "+log);
-				    logOb.createWriter(function(fileWriter) {
-				        
-				        fileWriter.seek(fileWriter.length);
-				        
-				        var blob = new Blob([log], {type:'text/plain'});
-				        fileWriter.write(blob);
-				        console.log("ok, in theory i worked");
-				    }, fail);
-				}
-			    
-				function lerArquivo() {
-				    logOb.file(function(file) {
-				        var reader = new FileReader();
-				
-				        reader.onloadend = function(e) {
-				            console.log(this.result);
-				        };
-				
-				        login_storage = reader.readAsText(file);
-				    }, fail);
-				}
-			    
-			    lerArquivo();
-			    
-			    alert('Olá '+login_storage);
-			    
 				var app_id = window.localStorage.getItem('app_id');
 				
 				if(app_id!="" && app_id!=null){
@@ -110,7 +72,6 @@
 							window.localStorage.setItem('id_usuarios',res[0]);
 							window.localStorage.setItem('nome_usuarios',res[1]);
 							window.localStorage.setItem('tipo_usuarios',res[2]);
-							writeLog('id_usuarios');
 							$.mobile.changePage("home.html", { transition: "fade", changeHash: false });
 						}
 					});
