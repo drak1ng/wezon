@@ -668,7 +668,8 @@ html[xmlns] .clearfix {
   color:#FFF;
 }
 .cal1 .clndr .clndr-table tr .day:hover {
-  background: #333;
+  background: #CCC !important;
+  color:#000 !important;
 }
 .cal1 .clndr .clndr-table tr .day.today,
 .cal1 .clndr .clndr-table tr .day.my-today {
