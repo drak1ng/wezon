@@ -48,11 +48,12 @@
 			
 			<script>
 				
-				var app_id = window.localStorage.getItem('app_id');
-				
-				if(app_id!="" && app_id!=null){
-					$.mobile.changePage("home.html", { transition: "fade", changeHash: false });
-				}
+				$(document).ready(function(){
+					var id_usuarios = window.localStorage.getItem('id_usuarios');
+					if(id_usuarios!="" && id_usuarios!=null){
+						$.mobile.changePage("home.html", { transition: "fade", changeHash: false });
+					}
+				});
 				
 				$('#login_email').mask("(99) 99999-9999");
 				
