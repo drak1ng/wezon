@@ -42,12 +42,13 @@
 				    <div style="margin:0px 50px; text-align:center;"><img src="../img/logo.png" alt="logo2" height="32" /></div>
 				</div>
 			    <div class="titulo_tela">
+				    <div class='bt_voltar'>Voltar</div>
 					<div style='margin:0px 80px;'>FORNECEDORES</div>
 				</div>
 		    </div>
 
 			<div role="main" class="ui-content">
-				<div id="id_meus_fornecedores" style="height:100%; text-align:center; padding:75px 0px 0px 0px; margin:0px -16px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
+				<div id="id_fornecedores_ficha" style="height:100%; text-align:center; padding:75px 0px 0px 0px; margin:0px -16px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
 					<div style="padding-top:120px; text-align:center; font-size:13px;">
 						<img src="../img/loading.gif" width="110" height="10" /><br><br>
 						Aguarde carregando...
@@ -57,12 +58,15 @@
 		
 			
 			<script>
+				$(".bt_voltar").click(function(){
+					$.mobile.changePage("meus_fornecedores.html", { transition: "fade", changeHash: false });
+				});
+				
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
 				
-				var id_usuarios = window.localStorage.getItem('id_usuarios');
-				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
+				var id_fornecedor = window.localStorage.getItem('id_fornecedor');
 				
-				$.get("http://wezon.com.br/app_api/meus_fornecedores.php", { id_usuarios:id_usuarios, tipo_usuarios:tipo_usuarios }, function(data){ $("#id_meus_fornecedores").html(data); });
+				$.get("http://wezon.com.br/app_api/fornecedores_ficha.php", { id_fornecedor:id_fornecedor }, function(data){ $("#id_fornecedores_ficha").html(data); });
 				
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();
