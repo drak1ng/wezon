@@ -56,7 +56,15 @@
 		        
 		        function onOnLine(){
 		            $('#checarConexao').hide();
-		            if(jaFicouOffline==1){ jaFicouOffline=0; $.mobile.changePage("login.html", { transition: "fade", changeHash: false }); }
+		            if(jaFicouOffline==1){
+			            jaFicouOffline=0;
+				        var id_usuarios = window.localStorage.getItem('id_usuarios');
+						if(id_usuarios!="" && id_usuarios!=null){
+							$.mobile.changePage("./paginas/home.html", { transition: "none", changeHash: false });
+						}else{
+							$.mobile.changePage("./paginas/login.html", { transition: "none", changeHash: false });	
+						}
+			        }
 		        }
 		        
 		        function onOffLine(){
@@ -65,7 +73,12 @@
 		        }
 		        
 		        function carregar(){
-					$.mobile.changePage("./paginas/login.html", { transition: "fade", changeHash: false });
+			        var id_usuarios = window.localStorage.getItem('id_usuarios');
+					if(id_usuarios!="" && id_usuarios!=null){
+						$.mobile.changePage("./paginas/home.html", { transition: "none", changeHash: false });
+					}else{
+						$.mobile.changePage("./paginas/login.html", { transition: "none", changeHash: false });	
+					}
 				}
 				
 				alert = function (txt) {
