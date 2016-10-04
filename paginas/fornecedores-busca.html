@@ -71,8 +71,15 @@
 			    });
 				
 				function buscaFornecedor(){
+					
 					var x = $('#campo-busca-fornecedor').val();
-					alert('Olá: '+x);
+					
+					$("#id_fornecedores_busca").html('<div style="padding-top:120px; text-align:center; font-size:13px;"><img src="../img/loading.gif" width="110" height="10" /><br><br>Aguarde carregando...</div>');
+					
+					$.get("http://wezon.com.br/app_api/fornecedores_busca.php", { busca:x }, function(data){ $("#id_fornecedores_busca").html(data); });
+					
+					return false;
+					
 				}
 				
 			</script>
