@@ -62,10 +62,6 @@
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
 				var nome_usuarios = window.localStorage.getItem('nome_usuarios');
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
-				
-				if(calendars){
-					calendars.destroy();
-				}
 
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
 				

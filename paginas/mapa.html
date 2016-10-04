@@ -53,7 +53,7 @@
 
 			<div role="main" class="ui-content">
 				<div style="text-align:center; padding:74px 0px 0px 0px; margin:0px -16px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
-					<div class="cal1" style="display:none !important; z-index:999; display:block; position:fixed; width:100%; top:110px; left:0px;"></div>
+					<div class="cal2" style="display:none !important; z-index:999; display:block; position:fixed; width:100%; top:110px; left:0px;"></div>
 					<div id="id_conteudo_mapa">
 					<div style="padding-top:120px; text-align:center; font-size:13px;">
 						<img src="../img/loading.gif" width="110" height="10" /><br><br>
@@ -69,10 +69,6 @@
 				var nome_usuarios = window.localStorage.getItem('nome_usuarios');
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
 				
-				if(calendars){
-					calendars.destroy();
-				}
-				
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
 				
 				$.get("http://wezon.com.br/app_api/mapa.php", function(data){ $("#id_conteudo_mapa").html(data); });
@@ -82,7 +78,7 @@
 			    });
 			    
 			    $('.icone_botao_agenda').click(function(){
-				    $('.cal1').slideToggle();
+				    $('.cal2').slideToggle();
 			    });
 			    
 				// Call this from the developer console and you can control both instances
@@ -150,11 +146,11 @@
 				        }
 				    ];
 				    
-				    calendars.clndr1 = $('.cal1').clndr({
+				    calendars.clndr1 = $('.cal2').clndr({
 				        //events: eventArray,
 				        clickEvents: {
 				            click: function (target) {
-								$.get("http://wezon.com.br/app_api/mapa.php", { id_usuario:id_usuarios, tipo_usuarios:tipo_usuarios, data:target.date._i }, function(data){ $("#id_conteudo_mapa").html(data); $('.cal1').hide(); });
+								$.get("http://wezon.com.br/app_api/mapa.php", { id_usuario:id_usuarios, tipo_usuarios:tipo_usuarios, data:target.date._i }, function(data){ $("#id_conteudo_mapa").html(data); $('.cal2').hide(); });
 				            }
 				        },
 				        multiDayEvents: {
