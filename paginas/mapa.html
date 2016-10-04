@@ -69,6 +69,8 @@
 				var nome_usuarios = window.localStorage.getItem('nome_usuarios');
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
 				
+				calendars.destroy();
+				
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
 				
 				$.get("http://wezon.com.br/app_api/mapa.php", function(data){ $("#id_conteudo_mapa").html(data); });
