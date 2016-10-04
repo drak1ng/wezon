@@ -150,7 +150,7 @@
 				        //events: eventArray,
 				        clickEvents: {
 				            click: function (target) {
-								$.get("http://wezon.com.br/app_api/mapa.php", { id_usuario:id_usuarios, tipo_usuarios:tipo_usuarios, data:target.date._i }, function(data){ $("#id_conteudo_mapa").html(data); });
+								$.get("http://wezon.com.br/app_api/mapa.php", { id_usuario:id_usuarios, tipo_usuarios:tipo_usuarios, data:target.date._i }, function(data){ $("#id_conteudo_mapa").html(data); $('.cal1').hide(); });
 				            }
 				        },
 				        multiDayEvents: {

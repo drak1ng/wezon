@@ -146,7 +146,7 @@
 				        //events: eventArray,
 				        clickEvents: {
 				            click: function (target) {
-								$.get("http://wezon.com.br/app_api/agenda.php", { id_usuario:id_usuarios, tipo_usuarios:tipo_usuarios, data:target.date._i }, function(data){ $(".lista_agenda").html(data); $('.cal1').hide(); });
+								$.get("http://wezon.com.br/app_api/agenda.php", { id_usuario:id_usuarios, tipo_usuarios:tipo_usuarios, data:target.date._i }, function(data){ $(".lista_agenda").html(data); });
 				            }
 				        },
 				        multiDayEvents: {
