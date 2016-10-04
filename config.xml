@@ -118,6 +118,8 @@
 
 <plugin name="com.cordova.plugins.fileopener" spec="1.0.1" source="pgb" />
 
+<plugin name="cordova-plugin-file-transfer" spec="1.3.0" source="pgb" />
+
 <!-- Device -->
 <gap:plugin name="org.apache.cordova.device" />
 
