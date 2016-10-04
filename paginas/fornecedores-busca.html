@@ -45,7 +45,9 @@
 					<div style='margin:0px 80px;'>FORNECEDORES</div>
 				</div>
 			    <div class="barra-busca">
-					<input type="search" id="campo-busca-fornecedor">
+				    <form action="#" onsubmit="return buscaFornecedor();">
+						<input type="search" id="campo-busca-fornecedor">
+					</form>
 				</div>
 		    </div>
 
@@ -67,6 +69,11 @@
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();
 			    });
+				
+				function buscaFornecedor(){
+					var x = $('#campo-busca-fornecedor').val();
+					alert('Olá: '+x);
+				}
 				
 			</script>
 		
