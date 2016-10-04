@@ -47,7 +47,7 @@
 				</div>
 			    <div class="titulo_tela">
 				    <div class="icone_botao_agenda"></div>
-					<div style='margin:0px 80px;'>MAPA</div>
+					<div style='margin:0px 80px;' id='legenda_titulo_mapa'>MAPA</div>
 				</div>
 		    </div>
 
@@ -150,6 +150,9 @@
 				        //events: eventArray,
 				        clickEvents: {
 				            click: function (target) {
+					            var data_legenda = target.date._i;
+					            data_legenda = data_legenda[8]+data_legenda[9]+"/"+data_legenda[5]+data_legenda[6]+"/"+data_legenda[0]+data_legenda[1]+data_legenda[2]+data_legenda[3];
+					            $('#legenda_titulo_mapa').html('MAPA  - '+data_legenda);
 								$.get("http://wezon.com.br/app_api/mapa.php", { id_usuario:id_usuarios, tipo_usuarios:tipo_usuarios, data:target.date._i }, function(data){ $("#id_conteudo_mapa").html(data); $('.cal2').hide(); });
 				            }
 				        },
