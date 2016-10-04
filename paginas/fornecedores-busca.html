@@ -75,13 +75,26 @@
 					var x = $('#campo-busca-fornecedor').val();
 					
 					if(x!=""){
+						window.localStorage.setItem('busca_conteudo',x);
 						$("#id_fornecedores_busca").html('<div style="padding-top:120px; text-align:center; font-size:13px;"><img src="../img/loading.gif" width="110" height="10" /><br><br>Aguarde carregando...</div>');
 						$.get("http://wezon.com.br/app_api/fornecedores_busca.php", { busca:x }, function(data){ $("#id_fornecedores_busca").html(data); });
+					}else{
+						window.localStorage.setItem('busca_conteudo','');
+						$.get("http://wezon.com.br/app_api/fornecedores_categoria.php", function(data){ $("#id_fornecedores_busca").html(data); });
 					}
 					
 					return false;
 					
 				}
+				
+				var busca_conteudo = window.localStorage.getItem('busca_conteudo');
+				
+				if(busca_conteudo!="" && busca_conteudo!=null){
+					$('#campo-busca-fornecedor').val(busca_conteudo);
+					buscaFornecedor();
+				}
+				
+				window.localStorage.setItem('busca_conteudo','');
 				
 			</script>
 		
