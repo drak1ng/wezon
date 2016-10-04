@@ -42,13 +42,10 @@
 				    <div style="margin:0px 50px; text-align:center;"><img src="../img/logo.png" alt="logo2" height="32" /></div>
 				</div>
 			    <div class="titulo_tela">
+				    <div class='bt_voltar'>Voltar</div>
 					<div style='margin:0px 80px;'>FORNECEDORES</div>
 				</div>
-			    <div class="barra-busca">
-				    <form action="#" onsubmit="return buscaFornecedor();">
-						<input type="search" id="campo-busca-fornecedor">
-					</form>
-				</div>
+			    <div class="barra-nome-categoria"></div>
 		    </div>
 
 			<div role="main" class="ui-content">
@@ -62,9 +59,18 @@
 		
 			
 			<script>
+				var id_categoria = window.localStorage.getItem('id_categoria');
+				var categoria_nome = window.localStorage.getItem('categoria_nome');
+				
+				$(".bt_voltar").click(function(){
+					$.mobile.changePage("fornecedores-busca.html", { transition: "fade", changeHash: false });
+				});
+				
+				$('.barra-nome-categoria').html(categoria_nome);
+				
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
 				
-				$.get("http://wezon.com.br/app_api/fornecedores_categoria.php", function(data){ $("#id_fornecedores_busca").html(data); });
+				$.get("http://wezon.com.br/app_api/fornecedores_busca_categoria.php", { id_categoria:id_categoria }, function(data){ $("#id_fornecedores_busca").html(data); });
 				
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();
