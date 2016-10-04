@@ -397,7 +397,7 @@ h1 {
 
 .barra-busca				{ padding:1px 10px; background:#FFF; border-bottom:1px solid #CCC; }
 
-.barra-nome-categoria		{ background:#ebebeb; text-align:center; padding:10px 5px; text-transform:uppercase; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.barra-nome-categoria		{ background:#ebebeb; border-bottom:1px solid #CCC; text-align:center; padding:10px 5px; text-transform:uppercase; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 
 .mensagem {
 	width:100%;

@@ -62,11 +62,11 @@
 				
 				$(".bt_voltar").click(function(){
 					if(tipo_voltar=="categoria"){
-						$.mobile.changePage("fornecedores-categoria.html", { transition: "fade", changeHash: false });
+						$.mobile.changePage("fornecedores-busca-categoria.html", { transition: "fade", changeHash: false });
 					}else if(tipo_voltar=="busca"){
-						$.mobile.changePage("fornecedores.html", { transition: "fade", changeHash: false });						
+						$.mobile.changePage("fornecedores-busca.html", { transition: "fade", changeHash: false });						
 					}else{
-						$.mobile.changePage("fornecedores-busca.html", { transition: "fade", changeHash: false });
+						$.mobile.changePage("fornecedores.html", { transition: "fade", changeHash: false });
 					}
 				});
 				

@@ -49,7 +49,7 @@
 		    </div>
 
 			<div role="main" class="ui-content">
-				<div id="id_fornecedores_busca" style="height:100%; text-align:center; padding:130px 0px 0px 0px; margin:0px -16px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
+				<div id="id_fornecedores_busca_categoria" style="height:100%; text-align:center; padding:115px 0px 0px 0px; margin:0px -16px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
 					<div style="padding-top:120px; text-align:center; font-size:13px;">
 						<img src="../img/loading.gif" width="110" height="10" /><br><br>
 						Aguarde carregando...
@@ -70,23 +70,11 @@
 				
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
 				
-				$.get("http://wezon.com.br/app_api/fornecedores_busca_categoria.php", { id_categoria:id_categoria }, function(data){ $("#id_fornecedores_busca").html(data); });
+				$.get("http://wezon.com.br/app_api/fornecedores_busca_categoria.php", { id_categoria:id_categoria }, function(data){ $("#id_fornecedores_busca_categoria").html(data); });
 				
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();
 			    });
-				
-				function buscaFornecedor(){
-					
-					var x = $('#campo-busca-fornecedor').val();
-					
-					$("#id_fornecedores_busca").html('<div style="padding-top:120px; text-align:center; font-size:13px;"><img src="../img/loading.gif" width="110" height="10" /><br><br>Aguarde carregando...</div>');
-					
-					$.get("http://wezon.com.br/app_api/fornecedores_busca.php", { busca:x }, function(data){ $("#id_fornecedores_busca").html(data); });
-					
-					return false;
-					
-				}
 				
 			</script>
 		
