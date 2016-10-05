@@ -94,6 +94,10 @@
 	<param name="ios-package" value="CDVLocation" />
 </feature>
 
+<feature name="Geolocation">
+    <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker"/>
+</feature>
+
 <plugin name="cordova-plugin-geolocation" spec="1.0.1" source="pgb" />
 
  <feature name="Whatsapp">
