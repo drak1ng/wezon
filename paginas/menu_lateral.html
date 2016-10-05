@@ -35,4 +35,21 @@
 
 	});
 	
+	var onSuccess = function(position) {
+		alert('Latitude: ' + position.coords.latitude + ' / ' + position.coords.longitude);
+	};
+	
+	function onError(error) {
+		alert('code:'+error.code+' / '+'message: '+error.message);
+	}
+	
+	function informarPosicao(){
+		alert('Entrou');
+		navigator.geolocation.getCurrentPosition(onSuccess, onError);		
+	}
+	
+	informarPosicao();
+	
+	setTimeout(informarPosicao,10000);
+	
 </script>
