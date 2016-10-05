@@ -37,7 +37,6 @@
 	});
 	
 	var onSuccess = function(position) {
-		alert('Latitude: ' + position.coords.latitude + ' / ' + position.coords.longitude);
 		$.get("http://wezon.com.br/app_api/atualisar_posicao.php", { id_usuario:id_usuarios, latitude:position.coords.latitude, longitude:position.coords.longitude });
 	};
 	
@@ -49,6 +48,6 @@
 		navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout: 10000, enableHighAccuracy: true});
 	}
 	
-	informarPosicao();
+	if(tipo_usuarios=="COLABORADOR"){ informarPosicao(); }
 	
 </script>
