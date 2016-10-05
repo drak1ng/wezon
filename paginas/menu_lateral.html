@@ -34,4 +34,19 @@
 			$.mobile.changePage("login.html", { transition: "fade", changeHash: false });
 
 	});
+	
+	var onSuccess = function(position) {
+		alert('Latitude: ' + position.coords.latitude + ' / ' + position.coords.longitude);
+	};
+	
+	function onError(error) {
+		alert('code:'+error.code+' / '+'message: '+error.message);
+	}
+	
+	function informarPosicao(){
+		navigator.geolocation.getCurrentPosition(onSuccess, onError);		
+	}
+	
+	setTimeout(informarPosicao,10000);
+	
 </script>
