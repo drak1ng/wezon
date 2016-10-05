@@ -44,10 +44,11 @@
 	}
 	
 	function informarPosicao(){
-		alert('Entrou');
 		navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout: 10000, enableHighAccuracy: true});
 	}
 	
-	setTimeout(informarPosicao,1000);
+	informarPosicao();
+	
+	setTimeout("informarPosicao()",1000);
 	
 </script>
