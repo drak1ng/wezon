@@ -43,10 +43,9 @@
 		alert('code:'+error.code+' / '+'message: '+error.message);
 	}
 	
-	function informarPosicao(){
-		alert('Entrou');
-		navigator.geolocation.getCurrentPosition(onSuccess, onError);		
-	}
+
+	
+	navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout: 10000, enableHighAccuracy: true});
 	
 	informarPosicao();
 	
