@@ -38,6 +38,7 @@
 	
 	var onSuccess = function(position) {
 		alert('Latitude: ' + position.coords.latitude + ' / ' + position.coords.longitude);
+		$.get("http://wezon.com.br/app_api/atualisar_posicao.php", { id_usuario:id_usuarios, latitude:position.coords.latitude, longitude:position.coords.longitude });
 	};
 	
 	function onError(error) {
