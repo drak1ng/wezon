@@ -122,7 +122,8 @@
 <plugin name="cordova-plugin-dialogs" spec="1.1.1" source="pgb" />
 
 <plugin name="com.cordova.plugins.fileopener" spec="1.0.1" source="pgb" />
-<plugin name="com.cesidiodibenedetto.filechooser" spec="1.0.0" source="pgb" />
+
+<plugin name="cordova-plugin-camera" spec="1.2.0" source="pgb" />
 
 <!-- Device -->
 <gap:plugin name="org.apache.cordova.device" />
