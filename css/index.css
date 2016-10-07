@@ -386,7 +386,7 @@ h1 {
 
 .icone_botao_agenda			{ width:50px; height:38px; background:url(../img/icon_01.png) left center no-repeat; float:right; margin-top:-8px; }
 
-.fornecedor-imagem			{ height:110px; background:#CCC;margin:0px 0px 10px 0px; }
+.fornecedor-imagem			{ height:auto; width:100%; background:#CCC; margin:0px 0px 10px 0px; }
 .fornecedor-info			{ margin:10px 10px 10px 10px; font-size:14px; color:#444; line-height:20px; }
 .fornecedor-info-nome		{ font-size:20px; font-weight: bold; color:#000; line-height:28px; }
 .fornecedor-legenda			{ background:#691165; padding:10px 10px 8px 10px; font-size:12px; color:#FFF; text-transform:uppercase; text-shadow:none; }
