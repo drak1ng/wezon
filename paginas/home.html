@@ -62,7 +62,7 @@
 				
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
 				
-				if(tipo_usuarios!="COLABORADOR"){ $('.home-botao4').hide(); }
+				if(tipo_usuarios!="COLABORADOR"){ $('.home-botao2').hide(); $('.home-botao4').hide(); }
 				
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
 				
