@@ -373,6 +373,10 @@ h1 {
 .tarefa-bloco5				{ width: calc(100% - 0px); height: calc(100% - 191px); background:#FFF; padding:0px; color:#000; font-size:13px; position:fixed; left:0px; bottom:0px; line-height:24px; overflow:scroll; display:none; }
 .tarefa-bloco6				{ width: calc(100% - 30px); height: calc(100% - 221px); background:#FFF; padding:15px; color:#000; font-size:13px; position:fixed; left:0px; bottom:0px; line-height:24px; overflow:scroll; display:none; }
 
+.tarefa-bloco6-concluida	{ padding:10px 0px; font-size:14px; }
+.tarefa-bloco6-responsavel	{ padding:10px 0px; font-size:14px; }
+.tarefa-bloco6-comentarios	{ padding:10px 0px; font-size:14px; }
+
 .tarefa-bloco2-aba11		{ height:40px; background:url(../img/005.png) center center no-repeat #DDD; width: calc(50% - 1px); float:left; border-right:1px solid #CCC; }
 .tarefa-bloco2-aba33		{ height:40px; background:url(../img/007.png) center center no-repeat #DDD; width: calc(50% - 0px); float:left; }
 .tarefa-bloco2-aba11-on		{ height:41px; background:url(../img/008.png) center center no-repeat #FFF; width: calc(50% - 1px); float:left; border-right:1px solid #CCC; }
