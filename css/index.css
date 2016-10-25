@@ -377,12 +377,12 @@ h1 {
 .tarefa-bloco6-responsavel	{ padding:10px 0px; font-size:15px; }
 .tarefa-bloco6-comentarios	{ padding:10px 0px; font-size:15px; }
 
-.tarefa-bloco2-aba11		{ height:40px; background:url(../img/005.png) center center no-repeat #DDD; width: calc(50% - 1px); float:left; border-right:1px solid #CCC; }
-.tarefa-bloco2-aba33		{ height:40px; background:url(../img/007.png) center center no-repeat #DDD; width: calc(50% - 0px); float:left; }
-.tarefa-bloco2-aba44		{ height:40px; background:url(../img/011.png) center center no-repeat #DDD; width: calc(50% - 0px); float:left; }
-.tarefa-bloco2-aba11-on		{ height:41px; background:url(../img/008.png) center center no-repeat #FFF; width: calc(50% - 1px); float:left; border-right:1px solid #CCC; }
-.tarefa-bloco2-aba33-on		{ height:41px; background:url(../img/010.png) center center no-repeat #FFF; width: calc(50% - 0px); float:left; }
-.tarefa-bloco2-aba44-on		{ height:41px; background:url(../img/012.png) center center no-repeat #FFF; width: calc(50% - 0px); float:left; }
+.tarefa-bloco2-aba11		{ height:40px; background:url(../img/005.png) center center no-repeat #DDD; width: calc(33.3333% - 1px); float:left; border-right:1px solid #CCC; }
+.tarefa-bloco2-aba33		{ height:40px; background:url(../img/007.png) center center no-repeat #DDD; width: calc(33.3333% - 1px); float:left; border-right:1px solid #CCC; }
+.tarefa-bloco2-aba44		{ height:40px; background:url(../img/011.png) center center no-repeat #DDD; width: calc(33.3333% - 0px); float:left; }
+.tarefa-bloco2-aba11-on		{ height:41px; background:url(../img/008.png) center center no-repeat #FFF; width: calc(33.3333% - 1px); float:left; border-right:1px solid #CCC; }
+.tarefa-bloco2-aba33-on		{ height:41px; background:url(../img/010.png) center center no-repeat #FFF; width: calc(33.3333% - 1px); float:left; border-right:1px solid #CCC; }
+.tarefa-bloco2-aba44-on		{ height:41px; background:url(../img/012.png) center center no-repeat #FFF; width: calc(33.3333% - 0px); float:left; }
 
 .lista_arquivos				{ border-bottom:1px solid #CCC; padding:15px; font-size:15px; color:#000; line-height:20px; }
 .lista_arquivos span		{ font-size:12px; color:#666; display:block; }
