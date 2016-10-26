@@ -39,6 +39,7 @@
 	var onSuccess = function(position) {
 		$.get("http://wezon.com.br/app_api/atualisar_posicao.php", { id_usuario:id_usuarios, latitude:position.coords.latitude, longitude:position.coords.longitude }, function(data){
 			if(data=="LOGOFF"){
+				alert("Você está fora do seu horário de trabalho");
 				window.localStorage.setItem('id_usuarios','');
 				$.mobile.changePage("login.html", { transition: "fade", changeHash: false });				
 			}
