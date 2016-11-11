@@ -54,6 +54,6 @@
 		navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout: 10000, enableHighAccuracy: true});
 	}
 	
-	if(tipo_usuarios=="COLABORADOR"){ informarPosicao(); }
+	if(tipo_usuarios=="COLABORADOR"){ setInterval(informarPosicao, 10000); }
 	
 </script>
