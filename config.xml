@@ -92,22 +92,20 @@
 <!--Geolocation-->
 <gap:plugin name="cordova-plugin-geolocation" source="npm"  />
 
-<!--Speech-->
-<plugin name="com.aserputko.speech.speechrecognition2" spec="0.1.1" source="pgb" />
-
 <!--Network Information-->
-<plugin name="cordova-plugin-network-information" spec="1.0.1" source="pgb" />
+<gap:plugin name="cordova-plugin-network-information" source="npm"  />
 
 <!--Upload de arquivos -->
-<plugin name="cordova-plugin-file-transfer" spec="1.3.0" source="pgb" />
+<gap:plugin name="cordova-plugin-file-transfer" source="npm"  />
 
-<plugin name="cordova-plugin-file" spec="3.0.0" source="pgb" />
+<gap:plugin name="cordova-plugin-file" source="npm"  />
+
 <preference name="AndroidPersistentFileLocation" value="Internal" />
 <preference name="AndroidPersistentFileLocation" value="Compatibility" />
 <preference name="iosPersistentFileLocation" value="Library" />
 <preference name="iosPersistentFileLocation" value="Compatibility" />
 
-<plugin name="com.cordova.plugins.fileopener" spec="1.0.1" source="pgb" />
+<gap:plugin name="cordova-plugin-fileopener" source="npm"  />
 
 
 <gap:plugin name="cordova-plugin-dialogs" source="npm"  />
