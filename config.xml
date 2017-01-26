@@ -112,6 +112,12 @@
 <gap:plugin name="cordova-plugin-dialogs" source="npm"  />
 <gap:plugin name="cordova-plugin-device" source="npm" />
 
+<plugin name="cordova-plugin-media-capture" source="npm" spec="*">
+  <variable name="CAMERA_USAGE_DESCRIPTION" value="App would like to access the camera." />
+  <variable name="MICROPHONE_USAGE_DESCRIPTION" value="App would like to access the microphone." />
+  <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="App would like to access the library." />
+</plugin>
+
 
 <!-- Teclado sobrepondo para o android, igual iphone -->
 <!--<preference name="android-windowSoftInputMode" value="adjustPan" />-->
