@@ -15,31 +15,31 @@
 
 <icon src="icon.png" />
 
-<icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
-<icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
-<icon src="res/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
-<icon src="res/icon/android/icon-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
+<icon src="res/icones/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
+<icon src="res/icones/android/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
+<icon src="res/icones/android/icon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
+<icon src="res/icones/android/icon-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
 
-<icon src="res/icon/ios/icon-29.png"            gap:platform="ios"        width="29" height="29" />
-<icon src="res/icon/ios/icon-40.png"            gap:platform="ios"        width="40" height="40" />
-<icon src="res/icon/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
-<icon src="res/icon/ios/icon-58.png"            gap:platform="ios"        width="58" height="58" />
-<icon src="res/icon/ios/icon-60.png" 	        gap:platform="ios"        width="60" height="60" />
-<icon src="res/icon/ios/icon-72.png" 	        gap:platform="ios"        width="72" height="72" />
-<icon src="res/icon/ios/icon-76.png" 	        gap:platform="ios"        width="76" height="76" />
-<icon src="res/icon/ios/icon-80.png" 	        gap:platform="ios"        width="80" height="80" />
-<icon src="res/icon/ios/icon-87.png" 	        gap:platform="ios"        width="87" height="87" />
-<icon src="res/icon/ios/icon-120.png" 	        gap:platform="ios"        width="120" height="120" />
-<icon src="res/icon/ios/icon-180.png" 	        gap:platform="ios"        width="180" height="180" />
-<icon src="res/icon/ios/icon-152.png" 	        gap:platform="ios"        width="152" height="152" />
-<icon src="res/icon/ios/icon-512.png" 	        gap:platform="ios"        width="512" height="512" />
-<icon src="res/icon/ios/icon-1024.png" 	        gap:platform="ios"        width="1024" height="1024" />
+<icon src="res/icones/ios/icon-29.png"            gap:platform="ios"        width="29" height="29" />
+<icon src="res/icones/ios/icon-40.png"            gap:platform="ios"        width="40" height="40" />
+<icon src="res/icones/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
+<icon src="res/icones/ios/icon-58.png"            gap:platform="ios"        width="58" height="58" />
+<icon src="res/icones/ios/icon-60.png" 	        gap:platform="ios"        width="60" height="60" />
+<icon src="res/icones/ios/icon-72.png" 	        gap:platform="ios"        width="72" height="72" />
+<icon src="res/icones/ios/icon-76.png" 	        gap:platform="ios"        width="76" height="76" />
+<icon src="res/icones/ios/icon-80.png" 	        gap:platform="ios"        width="80" height="80" />
+<icon src="res/icones/ios/icon-87.png" 	        gap:platform="ios"        width="87" height="87" />
+<icon src="res/icones/ios/icon-120.png" 	        gap:platform="ios"        width="120" height="120" />
+<icon src="res/icones/ios/icon-180.png" 	        gap:platform="ios"        width="180" height="180" />
+<icon src="res/icones/ios/icon-152.png" 	        gap:platform="ios"        width="152" height="152" />
+<icon src="res/icones/ios/icon-512.png" 	        gap:platform="ios"        width="512" height="512" />
+<icon src="res/icones/ios/icon-1024.png" 	        gap:platform="ios"        width="1024" height="1024" />
 
-<icon src="res/icon/blackberry/icon-80.png"     gap:platform="blackberry" />
-<icon src="res/icon/blackberry/icon-80.png"     gap:platform="blackberry" gap:state="hover"/>
-<icon src="res/icon/webos/icon-64.png"          gap:platform="webos" />
-<icon src="res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
-<icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
+<icon src="res/icones/blackberry/icon-80.png"     gap:platform="blackberry" />
+<icon src="res/icones/blackberry/icon-80.png"     gap:platform="blackberry" gap:state="hover"/>
+<icon src="res/icones/webos/icon-64.png"          gap:platform="webos" />
+<icon src="res/icones/windows-phone/icon-48.png"  gap:platform="winphone" />
+<icon src="res/icones/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
 
 <!-- Define app splash screen for each platform. -->
 <gap:splash src="res/screen/android/screen-ldpi-portrait.png"  gap:platform="android" gap:density="ldpi" />
@@ -141,7 +141,7 @@
 <preference name="detect-data-types"          value="true" />           <!-- ios: controls whether data types (such as phone no. and dates) are automatically turned into links by the system -->
 <preference name="exit-on-suspend"            value="false" />          <!-- ios: if set to true, app will terminate when home button is pressed -->
 <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
-<preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
+<preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icones/cursor from being displayed on the app -->
 <preference name="android-minSdkVersion"      value="14" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
 <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 <preference name="stay-in-webview"            value="false" />
