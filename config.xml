@@ -94,6 +94,7 @@
 
 <!--Network Information-->
 <gap:plugin name="cordova-plugin-network-information" source="npm"  />
+<gap:plugin name="cordova-plugin-media" source="npm"  />
 
 <!--Upload de arquivos -->
 <gap:plugin name="cordova-plugin-file-transfer" source="npm"  />
