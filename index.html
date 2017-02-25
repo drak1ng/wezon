@@ -107,25 +107,42 @@
 					
 				}
 				
-				app.push = PushNotification.init({
-				     "android": {
-				         "senderID": "662294625891"
-				     },
-				     "ios": {
-				       "sound": true,
-				       "vibration": true,
-				       "badge": true
-				     },
-				     "windows": {}
-				 });
+				var push = PushNotification.init({
+				    android: {
+				        senderID: "662294625891"
+				    },
+				    browser: {
+				        pushServiceURL: 'http://push.api.phonegap.com/v1/push'
+				    },
+				    ios: {
+				        alert: "true",
+				        badge: "true",
+				        sound: "true"
+				    },
+				    windows: {}
+				});
 				
-				 app.push.on('registration', function(data) {
-					 alert("ID: "+data.registrationId);
-				 });
+				push.on('registration', function(data) {
+				    // data.registrationId
+					alert("ID: " + data.registrationId);
+				});
 				
-				 app.push.on('error', function(e) {
-					 alert("ERRO: "+e.message);
-				 });
+				push.on('notification', function(data) {
+				    // data.message,
+				    // data.title,
+				    // data.count,
+				    // data.sound,
+				    // data.image,
+				    // data.additionalData
+					alert("Chamou Push: " + data.message);
+				});
+				
+				push.on('error', function(e) {
+				    // e.message
+					alert("ERRO: " + e.message);
+				});
+				
+				
 				
 			</script>
     </body>
