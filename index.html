@@ -86,25 +86,26 @@
 					navigator.notification.alert(txt,null,'AVISO','OK');
 				}
 				
-				app.push = PushNotification.init({
-				     "android": {
-				         "senderID": "662294625891"
-				     },
-				     "ios": {
-				       "sound": true,
-				       "vibration": true,
-				       "badge": true
-				     },
-				     "windows": {}
-				 });
+				if(window.plugins){
+					var pushNotification;
+					pushNotification = window.plugins.pushNotification;
+					function successHandler(data) {
+						alert(JSON.stringify(data));
+					}
+					function errorHandler(data) {
+						alert("error "+JSON.stringify(data));
+					}
+					function tokenHandler (result) {
+						alert('device token = ' + result);
+					}
 				
-				 app.push.on('registration', function(data) {
-					 alert("ID: "+data.registrationId);
-				 });
-				
-				 app.push.on('error', function(e) {
-					 alert("ERRO: "+e.message);
-				 });
+					if(device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos"){
+						pushNotification.register(successHandler,errorHandler,{"senderID":"662294625891","ecb":"onNotification"});
+					}else{
+						pushNotification.register(tokenHandler,errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});
+					}
+					
+				}
 				
 			</script>
     </body>
