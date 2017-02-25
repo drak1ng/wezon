@@ -125,9 +125,7 @@
   <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="App would like to access the library." />
 </plugin>
 
-<plugin name="phonegap-plugin-push" source="npm" spec="*">
-    <param name="SENDER_ID" value="662294625891" />
-</plugin>
+<gap:plugin name="phonegap-plugin-push" source="npm"  />
 
 <!-- Teclado sobrepondo para o android, igual iphone -->
 <!--<preference name="android-windowSoftInputMode" value="adjustPan" />-->
