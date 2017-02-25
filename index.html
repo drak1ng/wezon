@@ -86,6 +86,26 @@
 					navigator.notification.alert(txt,null,'AVISO','OK');
 				}
 				
+				app.push = PushNotification.init({
+				     "android": {
+				         "senderID": "662294625891"
+				     },
+				     "ios": {
+				       "sound": true,
+				       "vibration": true,
+				       "badge": true
+				     },
+				     "windows": {}
+				 });
+				
+				 app.push.on('registration', function(data) {
+					 alert("ID: "+data.registrationId);
+				 });
+				
+				 app.push.on('error', function(e) {
+				     console.log("push error = " + e.message);
+				 });
+				
 			</script>
     </body>
 </html>
