@@ -86,27 +86,6 @@
 					navigator.notification.alert(txt,null,'AVISO','OK');
 				}
 				
-				if(window.plugins){
-					var pushNotification;
-					pushNotification = window.plugins.pushNotification;
-					function successHandler(data) {
-						alert(JSON.stringify(data));
-					}
-					function errorHandler(data) {
-						alert("error "+JSON.stringify(data));
-					}
-					function tokenHandler (result) {
-						alert('device token = ' + result);
-					}
-				
-					if(device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos"){
-						pushNotification.register(successHandler,errorHandler,{"senderID":"662294625891","ecb":"onNotification"});
-					}else{
-						pushNotification.register(tokenHandler,errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});
-					}
-					
-				}
-				
 				var push = PushNotification.init({
 				    android: {
 				        senderID: "662294625891"
