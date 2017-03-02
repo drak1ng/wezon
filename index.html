@@ -87,7 +87,7 @@
 			        push.on('notification', function(data) {
 			            console.log('notification event');
 			            navigator.notification.alert(
-			                data.message + data.additionalData,         // message
+			                data.message + data.additionalData.info,         // message
 			                null,                 // callback
 			                data.title,           // title
 			                'Ok'                  // buttonName
