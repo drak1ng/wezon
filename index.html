@@ -86,12 +86,12 @@
 			
 			        push.on('notification', function(data) {
 			            console.log('notification event');
-			            navigator.notification.alert(
-			                data.message + data.additionalData.info,         // message
-			                null,                 // callback
-			                data.title,           // title
-			                'Ok'                  // buttonName
-			            );
+			            if(data.additionalData.type=="mensagem"){
+							window.localStorage.setItem('id_tarefa',data.additionalData.codigo);
+							$.mobile.changePage("chat.html", { transition: "fade", changeHash: false });
+			            }else{
+				            $.mobile.changePage("agenda.html", { transition: "fade", changeHash: false });
+			            }
 			    	});
 			    	
 			    	
