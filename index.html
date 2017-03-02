@@ -75,7 +75,7 @@
 				        
 			            console.log('registration event: ' + data.registrationId);
 		                localStorage.setItem('registrationId', data.registrationId);			            
-			            alert(data.registrationId);
+			            //alert(data.registrationId);
 			            
 			        });
 			
@@ -87,7 +87,7 @@
 			        push.on('notification', function(data) {
 			            console.log('notification event');
 			            navigator.notification.alert(
-			                data.message,         // message
+			                data.message + data.type,         // message
 			                null,                 // callback
 			                data.title,           // title
 			                'Ok'                  // buttonName
