@@ -86,13 +86,15 @@
 			
 			        push.on('notification', function(data) {
 			            console.log('notification event');
-			            setTimeout(onNotification(data), 1000);
+			            window.localStorage.setItem('pushdata',data);
+			            setTimeout(onNotification, 1000);
 			    	});
 			    	
 			    	
 		        }
 		        
 		        function onNotification(data){
+			        var data = window.localStorage.getItem('pushdata');
 					if(data.additionalData.type=="mensagem"){
 						window.localStorage.setItem('id_tarefa',data.additionalData.codigo);
 						$.mobile.changePage("chat.html", { transition: "fade", changeHash: false });
