@@ -86,7 +86,7 @@
 			
 			        push.on('notification', function(data) {
 			            console.log('notification event');
-			            onNotification(data);
+			            setTimeout(onNotification(data), 1000);
 			    	});
 			    	
 			    	
