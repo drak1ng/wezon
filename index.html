@@ -86,19 +86,15 @@
 			
 			        push.on('notification', function(data) {
 			            console.log('notification event');
-			            setTimeout(onNotification(data), 4000);
+			            if(data.additionalData.type=="mensagem"){
+							window.localStorage.setItem('id_tarefa',data.additionalData.codigo);
+							$.mobile.changePage("chat.html", { transition: "fade", changeHash: false });
+			            }else{
+				            $.mobile.changePage("agenda.html", { transition: "fade", changeHash: false });
+			            }
 			    	});
 			    	
 			    	
-		        }
-		        
-		        function onNotification(data){
-					if(data.additionalData.type=="mensagem"){
-						window.localStorage.setItem('id_tarefa',data.additionalData.codigo);
-						$.mobile.changePage("chat.html", { transition: "fade", changeHash: false });
-		            }else{
-			            $.mobile.changePage("agenda.html", { transition: "fade", changeHash: false });
-		            }
 		        }
 		        
 		        function onOnLine(){
