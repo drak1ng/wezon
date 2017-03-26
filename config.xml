@@ -114,7 +114,7 @@
 <preference name="iosPersistentFileLocation" value="Library" />
 <preference name="iosPersistentFileLocation" value="Compatibility" />
 
-<gap:plugin name="cordova-plugin-fileopener" source="npm"  />
+<gap:plugin name="cordova-open" source="npm"  />
 <gap:plugin name="cordova-plugin-inappbrowser" source="npm"  />
 
 <gap:plugin name="cordova-plugin-dialogs" source="npm"  />
