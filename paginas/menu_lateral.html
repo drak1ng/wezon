@@ -36,7 +36,7 @@
 	
 	var onSuccess = function(position) {
 		var registrationId = localStorage.getItem('registrationId');
-		$.get("http://wezon.com.br/app_api/atualisar_posicao.php", { id_usuario:id_usuarios, latitude:position.coords.latitude, longitude:position.coords.longitude, registrationId:registrationId }, function(data){
+		$.get("http://wezon.com.br/app_api/atualisar_posicao.php", { id_usuario:id_usuarios, tipo_usuarios:tipo_usuarios, latitude:position.coords.latitude, longitude:position.coords.longitude, registrationId:registrationId }, function(data){
 			if(data=="LOGOFF"){
 				alert("Você está fora do seu horário de trabalho");
 				window.localStorage.setItem('id_usuarios','');
