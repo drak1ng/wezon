@@ -79,7 +79,7 @@
 					if(confirme_senha==""){ alert("O campo Confirme a Senha deve ser preenchido"); return false; }
 					if(confirme_senha!=senha){ alert("As senha informadas não são iguais"); return false; }
 					
-					$.get("http://wezon.com.br/app_api/cadastro.php", { nome:nome, sobrenome:sobrenome, apelido:apelido, email:email, celular:celular, senha:senha }, function(data){
+					$.get("https://wezon.com.br/app_api/cadastro.php", { nome:nome, sobrenome:sobrenome, apelido:apelido, email:email, celular:celular, senha:senha }, function(data){
 						if(data=="ERRO_CELULAR"){
 							alert("Esse Celular já foi utilizado em outro Cadastro");
 						}else if(data=="OK"){

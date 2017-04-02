@@ -71,7 +71,7 @@
 				
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
 				
-				$.get("http://wezon.com.br/app_api/mapa.php", function(data){ $("#id_conteudo_mapa").html(data); });
+				$.get("https://wezon.com.br/app_api/mapa.php", function(data){ $("#id_conteudo_mapa").html(data); });
 				
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();
@@ -153,7 +153,7 @@
 					            var data_legenda = target.date._i;
 					            data_legenda = data_legenda[8]+data_legenda[9]+"/"+data_legenda[5]+data_legenda[6]+"/"+data_legenda[0]+data_legenda[1]+data_legenda[2]+data_legenda[3];
 					            $('#legenda_titulo_mapa').html('MAPA  - '+data_legenda);
-								$.get("http://wezon.com.br/app_api/mapa.php", { id_usuario:id_usuarios, tipo_usuarios:tipo_usuarios, data:target.date._i }, function(data){ $("#id_conteudo_mapa").html(data); $('.cal2').hide(); });
+								$.get("https://wezon.com.br/app_api/mapa.php", { id_usuario:id_usuarios, tipo_usuarios:tipo_usuarios, data:target.date._i }, function(data){ $("#id_conteudo_mapa").html(data); $('.cal2').hide(); });
 				            }
 				        },
 				        multiDayEvents: {

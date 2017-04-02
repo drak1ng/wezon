@@ -64,7 +64,7 @@
 			<script>
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
 				
-				$.get("http://wezon.com.br/app_api/fornecedores_categoria.php", function(data){ $("#id_fornecedores_busca").html(data); });
+				$.get("https://wezon.com.br/app_api/fornecedores_categoria.php", function(data){ $("#id_fornecedores_busca").html(data); });
 				
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();
@@ -77,10 +77,10 @@
 					if(x!=""){
 						window.localStorage.setItem('busca_conteudo',x);
 						$("#id_fornecedores_busca").html('<div style="padding-top:120px; text-align:center; font-size:13px;"><img src="../img/loading.gif" width="110" height="10" /><br><br>Aguarde carregando...</div>');
-						$.get("http://wezon.com.br/app_api/fornecedores_busca.php", { busca:x }, function(data){ $("#id_fornecedores_busca").html(data); });
+						$.get("https://wezon.com.br/app_api/fornecedores_busca.php", { busca:x }, function(data){ $("#id_fornecedores_busca").html(data); });
 					}else{
 						window.localStorage.setItem('busca_conteudo','');
-						$.get("http://wezon.com.br/app_api/fornecedores_categoria.php", function(data){ $("#id_fornecedores_busca").html(data); });
+						$.get("https://wezon.com.br/app_api/fornecedores_categoria.php", function(data){ $("#id_fornecedores_busca").html(data); });
 					}
 					
 					return false;

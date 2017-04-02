@@ -62,7 +62,7 @@
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
 				
-				$.get("http://wezon.com.br/app_api/meus_fornecedores.php", { id_usuarios:id_usuarios, tipo_usuarios:tipo_usuarios }, function(data){ $("#id_meus_fornecedores").html(data); });
+				$.get("https://wezon.com.br/app_api/meus_fornecedores.php", { id_usuarios:id_usuarios, tipo_usuarios:tipo_usuarios }, function(data){ $("#id_meus_fornecedores").html(data); });
 				
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();

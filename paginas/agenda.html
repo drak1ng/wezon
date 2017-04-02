@@ -65,7 +65,7 @@
 
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
 				
-				$.get("http://wezon.com.br/app_api/agenda.php", { id_usuario:id_usuarios, tipo_usuarios:tipo_usuarios }, function(data){ $(".lista_agenda").html(data); });
+				$.get("https://wezon.com.br/app_api/agenda.php", { id_usuario:id_usuarios, tipo_usuarios:tipo_usuarios }, function(data){ $(".lista_agenda").html(data); });
 				
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();
@@ -148,7 +148,7 @@
 				        //events: eventArray,
 				        clickEvents: {
 				            click: function (target) {
-								$.get("http://wezon.com.br/app_api/agenda.php", { id_usuario:id_usuarios, tipo_usuarios:tipo_usuarios, data:target.date._i }, function(data){ $(".lista_agenda").html(data); });
+								$.get("https://wezon.com.br/app_api/agenda.php", { id_usuario:id_usuarios, tipo_usuarios:tipo_usuarios, data:target.date._i }, function(data){ $(".lista_agenda").html(data); });
 				            }
 				        },
 				        multiDayEvents: {

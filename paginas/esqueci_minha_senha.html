@@ -58,7 +58,7 @@
 					
 					if(email==""){ alert("O campo E-mail deve ser preenchido"); return false; }
 					
-					$.get("http://wezon.com.br/app_api/esqueci-minha-senha.php", { email:email }, function(data){
+					$.get("https://wezon.com.br/app_api/esqueci-minha-senha.php", { email:email }, function(data){
 						if(data=="ERRO_EMAIL"){
 							alert("Não foi encontrado nenhum cadastro com esse E-mail!");
 						}else{

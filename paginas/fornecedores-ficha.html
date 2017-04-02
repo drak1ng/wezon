@@ -74,7 +74,7 @@
 				
 				var id_fornecedor = window.localStorage.getItem('id_fornecedor');
 				
-				$.get("http://wezon.com.br/app_api/fornecedores_ficha.php", { id_fornecedor:id_fornecedor }, function(data){ $("#id_fornecedores_ficha").html(data); });
+				$.get("https://wezon.com.br/app_api/fornecedores_ficha.php", { id_fornecedor:id_fornecedor }, function(data){ $("#id_fornecedores_ficha").html(data); });
 				
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();

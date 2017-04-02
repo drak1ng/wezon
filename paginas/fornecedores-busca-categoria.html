@@ -70,7 +70,7 @@
 				
 				$.get("menu_lateral.html", function(data){ $('.menu_lateral').html(data); });
 				
-				$.get("http://wezon.com.br/app_api/fornecedores_busca_categoria.php", { id_categoria:id_categoria }, function(data){ $("#id_fornecedores_busca_categoria").html(data); });
+				$.get("https://wezon.com.br/app_api/fornecedores_busca_categoria.php", { id_categoria:id_categoria }, function(data){ $("#id_fornecedores_busca_categoria").html(data); });
 				
 				$('.menu_lateral_botao_abrir').click(function(){
 				    $('.menu_lateral').show();
